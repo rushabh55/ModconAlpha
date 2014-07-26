@@ -112,6 +112,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 295695069}
   - 114: {fileID: 295695070}
+  - 114: {fileID: 295695071}
   m_Layer: 0
   m_Name: Globals
   m_TagString: Untagged
@@ -148,6 +149,25 @@ MonoBehaviour:
     y: 0
     width: 250
     height: 100
+--- !u!114 &295695071
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 295695068}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae942c9068183dc40a9d01f648273726, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  showInPanelTool: 1
+  generateNormals: 0
+  depthPass: 0
+  widgetsAreStatic: 0
+  mDebugInfo: 1
+  mClipping: 0
+  mClipRange: {x: 0, y: 0, z: 0, w: 0}
+  mClipSoftness: {x: 40, y: 40}
 --- !u!1 &417886802
 GameObject:
   m_ObjectHideFlags: 0
