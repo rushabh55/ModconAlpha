@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 public class DebugPanel : MonoBehaviour {
     public Rect __BoxPosition;
-    private static List<Object> _objCollection = new List<Object>();
+    private static StringBuilder _objCollection = new StringBuilder();
 	// Use this for initialization
 	void Start () 
     {
@@ -18,20 +18,16 @@ public class DebugPanel : MonoBehaviour {
 	
 	}
 
-    public static void AddText( UnityEngine.Object s )
+    public static void AddText( string s )
     {
-        _objCollection.Add(s);
+        _objCollection.Append(s);
     }
 
     void OnGUI()
     {
         GUI.Box(__BoxPosition, "");
-        StringBuilder _stringBuilder = new StringBuilder();
-        foreach ( UnityEngine.Object _obj in _objCollection)
-        {
-            _stringBuilder.Append(_obj.ToString() + "\n");
-        }
-        GUI.TextArea(__BoxPosition, _stringBuilder.ToString());
+
+        GUI.TextArea(__BoxPosition, _objCollection.ToString());
     }
 
 }

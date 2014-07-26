@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+#if !UNITY_ANDROID
 using UnityEditor;
 using UnityEditorInternal;
 
@@ -21,3 +22,4 @@ public class ObjectBuilderEditor : Editor
 		}
     }
 }
+#endif

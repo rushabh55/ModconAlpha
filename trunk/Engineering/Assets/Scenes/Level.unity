@@ -306,6 +306,7 @@ GameObject:
   - 33: {fileID: 1178001816}
   - 65: {fileID: 1178001815}
   - 23: {fileID: 1178001814}
+  - 114: {fileID: 1178001818}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -364,6 +365,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
+--- !u!114 &1178001818
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1178001813}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0349190e3af0c7b44b88ff46b475be22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  __objectToControl: {fileID: 1178001813}
 --- !u!1 &1240665765
 GameObject:
   m_ObjectHideFlags: 0
@@ -438,7 +451,6 @@ GameObject:
   - 33: {fileID: 1289171652}
   - 64: {fileID: 1289171651}
   - 23: {fileID: 1289171650}
-  - 54: {fileID: 1289171654}
   m_Layer: 0
   m_Name: Plane
   m_TagString: Untagged
@@ -498,21 +510,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1306453489}
   m_RootOrder: 0
---- !u!54 &1289171654
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1289171649}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: .0500000007
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!1 &1306453488
 GameObject:
   m_ObjectHideFlags: 0
