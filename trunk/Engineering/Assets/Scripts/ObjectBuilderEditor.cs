@@ -1,5 +1,5 @@
 ﻿using UnityEngine;
-#if !UNITY_ANDROID
+#if UNITY_ANDROID
 using UnityEditor;
 using UnityEditorInternal;
 
@@ -8,6 +8,7 @@ public class ObjectBuilderEditor : Editor
 {
     public override void OnInspectorGUI()
     {
+        
         DrawDefaultInspector();
         
         ObjectBuilderScript myScript = (ObjectBuilderScript)target;

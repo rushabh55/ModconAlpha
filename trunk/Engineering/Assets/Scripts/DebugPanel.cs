@@ -9,7 +9,7 @@ public class DebugPanel : MonoBehaviour {
 	// Use this for initialization
 	void Start () 
     {
-	
+        _objCollection.Append("yo");
 	}
 	
 	// Update is called once per frame
@@ -26,7 +26,7 @@ public class DebugPanel : MonoBehaviour {
     void OnGUI()
     {
         GUI.Box(__BoxPosition, "");
-
+        GUI.skin.textArea.fontSize = 50;
         GUI.TextArea(__BoxPosition, _objCollection.ToString());
     }
 
