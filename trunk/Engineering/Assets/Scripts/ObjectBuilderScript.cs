@@ -34,7 +34,8 @@ public class ObjectBuilderScript : MonoBehaviour
 		}
 
 	public void DeserializeObject() {
-        var a = SerializableGameObjectWrapper.read(); 
+        var a = SerializableGameObjectWrapper.read();
+        Debug.Log("New");
 	}
 }
 
