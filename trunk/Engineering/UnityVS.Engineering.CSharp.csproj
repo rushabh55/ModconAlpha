@@ -87,6 +87,7 @@
     <Compile Include="Assets\Scripts\Serializable\SerializableVector.cs" />
     <Compile Include="Assets\Scripts\translate.cs" />
     <Compile Include="Assets\iTween\iTween.cs" />
+    <None Include="Assets\DebugKey.txt" />
     <None Include="Assets\iTween\ReadMe!\ReadMe!.txt" />
     <None Include="Assets\Plugins\Android\AndroidManifest.xml" />
     <None Include="Assets\Plugins\Android\facebook\AndroidManifest.xml" />

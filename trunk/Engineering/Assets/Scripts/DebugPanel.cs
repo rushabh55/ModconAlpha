@@ -9,22 +9,29 @@ public class DebugPanel : MonoBehaviour {
 	// Use this for initialization
 	void Start () 
     {
-        FB.Init(onInitComplete);
-        FB.Login("", loginComplete);
+        FB.Init(onInitComplete, onHideunity);
         _objCollection.Append("yo");
 	}
 
+    private void onHideunity(bool isUnityShown)
+    {
+        FB.Login("email,publish_actions", loginComplete);
+    }
+
     private void loginComplete(FBResult result)
     {
+        FB.Login("email,publish_actions", loginComplete);
         if ( result.Error != null )
         {
+            FB.Login("", loginComplete);
            // UnityEngine.Debug.Log("Logged in ");
         }
     }
 
     private void onInitComplete()
     {
-        FB.Login("", loginComplete);
+        if (! FB.IsLoggedIn )
+        FB.Login("email,publish_actions", loginComplete);
     }
 	
 	// Update is called once per frame
