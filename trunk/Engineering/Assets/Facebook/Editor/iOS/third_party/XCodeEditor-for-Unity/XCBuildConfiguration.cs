@@ -79,7 +79,7 @@ namespace UnityEditor.XCodeEditor
 		
 		public bool AddOtherCFlags( string flag )
 		{
-			Debug.Log( "INIZIO 1" );
+			UnityEngine.Debug.Log( "INIZIO 1" );
 			PBXList flags = new PBXList();
 			flags.Add( flag );
 			return AddOtherCFlags( flags );
@@ -87,7 +87,7 @@ namespace UnityEditor.XCodeEditor
 		
 		public bool AddOtherCFlags( PBXList flags )
 		{
-			Debug.Log( "INIZIO 2" );
+			UnityEngine.Debug.Log( "INIZIO 2" );
 			
 			bool modified = false;
 			

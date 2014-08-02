@@ -38,7 +38,7 @@ namespace UnityEditor.XCodeEditor
         public PBXDictionary Decode( string data )
         {
             if( !data.StartsWith( PBX_HEADER_TOKEN ) ) {
-                Debug.Log( "Wrong file format." );
+                UnityEngine.Debug.Log( "Wrong file format." );
                 return null;
             }
 
@@ -138,7 +138,7 @@ namespace UnityEditor.XCodeEditor
         {
             switch( NextToken() ) {
                 case END_OF_FILE:
-                    Debug.Log( "End of file" );
+                    UnityEngine.Debug.Log( "End of file" );
                     return null;
                 case DICTIONARY_BEGIN_TOKEN:
                     return ParseDictionary();
@@ -164,7 +164,7 @@ namespace UnityEditor.XCodeEditor
             while( !complete ) {
                 switch( NextToken() ) {
                     case END_OF_FILE:
-                        Debug.Log( "Error: reached end of file inside a dictionary: " + index );
+                        UnityEngine.Debug.Log( "Error: reached end of file inside a dictionary: " + index );
                         complete = true;
                         break;
 
@@ -200,7 +200,7 @@ namespace UnityEditor.XCodeEditor
             while( !complete ) {
                 switch( NextToken() ) {
                     case END_OF_FILE:
-                        Debug.Log( "Error: Reached end of file inside a list: " + list );
+                        UnityEngine.Debug.Log( "Error: Reached end of file inside a list: " + list );
                         complete = true;
                         break;
                     case ARRAY_END_TOKEN:
@@ -272,7 +272,7 @@ namespace UnityEditor.XCodeEditor
                 {
                     if(currIdx >= data.Length)
                     {
-                        Debug.LogError("Unterminated comment found in .pbxproj file.  Bad things are probably going to start happening");
+                        UnityEngine.Debug.LogError("Unterminated comment found in .pbxproj file.  Bad things are probably going to start happening");
                         return "";
                     }
                     
@@ -382,7 +382,7 @@ namespace UnityEditor.XCodeEditor
                 builder.Append( Convert.ToString( value ) );
             }
             else {
-                Debug.LogWarning( "Error: unknown object of type " + value.GetType().Name );
+                UnityEngine.Debug.LogWarning( "Error: unknown object of type " + value.GetType().Name );
                 return false;
             }
     

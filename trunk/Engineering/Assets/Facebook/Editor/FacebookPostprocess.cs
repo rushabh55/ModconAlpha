@@ -15,7 +15,7 @@ namespace UnityEditor.FacebookEditor
             // If integrating with facebook on any platform, throw a warning if the app id is invalid
             if (!FBSettings.IsValidAppId)
             {
-                Debug.LogWarning("You didn't specify a Facebook app ID.  Please add one using the Facebook menu in the main Unity editor.");
+                UnityEngine.Debug.LogWarning("You didn't specify a Facebook app ID.  Please add one using the Facebook menu in the main Unity editor.");
             }
 
 
@@ -45,11 +45,11 @@ namespace UnityEditor.FacebookEditor
                 // The default Bundle Identifier for Unity does magical things that causes bad stuff to happen
                 if (PlayerSettings.bundleIdentifier == "com.Company.ProductName")
                 {
-                    Debug.LogError("The default Unity Bundle Identifier (com.Company.ProductName) will not work correctly.");
+                    UnityEngine.Debug.LogError("The default Unity Bundle Identifier (com.Company.ProductName) will not work correctly.");
                 }
                 if (!FacebookAndroidUtil.IsSetupProperly())
                 {
-                    Debug.LogError("Your Android setup is not correct. See Settings in Facebook menu.");
+                    UnityEngine.Debug.LogError("Your Android setup is not correct. See Settings in Facebook menu.");
                 }
 
                 if (!ManifestMod.CheckManifest())

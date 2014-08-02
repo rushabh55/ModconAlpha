@@ -36,7 +36,7 @@ namespace UnityEditor.FacebookEditor
             var outputFile = Path.Combine(Application.dataPath, "Plugins/Android/AndroidManifest.xml");
             if (!File.Exists(outputFile))
             {
-                Debug.LogError("An android manifest must be generated for the Facebook SDK to work.  Go to Facebook->Edit Settings and press \"Regenerate Android Manifest\"");
+                UnityEngine.Debug.LogError("An android manifest must be generated for the Facebook SDK to work.  Go to Facebook->Edit Settings and press \"Regenerate Android Manifest\"");
                 return false;
             }
 
@@ -45,7 +45,7 @@ namespace UnityEditor.FacebookEditor
 
             if (doc == null)
             {
-                Debug.LogError("Couldn't load " + outputFile);
+                UnityEngine.Debug.LogError("Couldn't load " + outputFile);
                 return false;
             }
 
@@ -54,7 +54,7 @@ namespace UnityEditor.FacebookEditor
 
             if (dict == null)
             {
-                Debug.LogError("Error parsing " + outputFile);
+                UnityEngine.Debug.LogError("Error parsing " + outputFile);
                 return false;
             }
 
@@ -63,7 +63,7 @@ namespace UnityEditor.FacebookEditor
             XmlElement loginElement = FindElementWithAndroidName("activity", "name", ns, UnityLoginActivityName, dict);
             if (loginElement == null)
             {
-                Debug.LogError(string.Format("{0} is missing from your android manifest.  Go to Facebook->Edit Settings and press \"Regenerate Android Manifest\"", LoginActivityName));
+                UnityEngine.Debug.LogError(string.Format("{0} is missing from your android manifest.  Go to Facebook->Edit Settings and press \"Regenerate Android Manifest\"", LoginActivityName));
                 result = false;
             }
 
@@ -71,7 +71,7 @@ namespace UnityEditor.FacebookEditor
             XmlElement deprecatedElement = FindElementWithAndroidName("activity", "name", ns, deprecatedMainActivityName, dict);
             if (deprecatedElement != null)
             {
-                Debug.LogWarning(string.Format("{0} is deprecated and no longer needed for the Facebook SDK.  Feel free to use your own main activity or use the default \"com.unity3d.player.UnityPlayerNativeActivity\"", deprecatedMainActivityName));
+                UnityEngine.Debug.LogWarning(string.Format("{0} is deprecated and no longer needed for the Facebook SDK.  Feel free to use your own main activity or use the default \"com.unity3d.player.UnityPlayerNativeActivity\"", deprecatedMainActivityName));
             }
 
             return result;
@@ -111,7 +111,7 @@ namespace UnityEditor.FacebookEditor
 
             if (!FBSettings.IsValidAppId)
             {
-                Debug.LogError("You didn't specify a Facebook app ID.  Please add one using the Facebook menu in the main Unity editor.");
+                UnityEngine.Debug.LogError("You didn't specify a Facebook app ID.  Please add one using the Facebook menu in the main Unity editor.");
                 return;
             }
 
@@ -120,7 +120,7 @@ namespace UnityEditor.FacebookEditor
 
             if (doc == null)
             {
-                Debug.LogError("Couldn't load " + fullPath);
+                UnityEngine.Debug.LogError("Couldn't load " + fullPath);
                 return;
             }
 
@@ -129,7 +129,7 @@ namespace UnityEditor.FacebookEditor
 
             if (dict == null)
             {
-                Debug.LogError("Error parsing " + fullPath);
+                UnityEngine.Debug.LogError("Error parsing " + fullPath);
                 return;
             }
 

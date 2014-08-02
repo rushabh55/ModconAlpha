@@ -102,7 +102,7 @@ namespace UnityEditor.XCodeEditor
 			this.Remove( LASTKNOWN_FILE_TYPE_KEY );
 			string extension = System.IO.Path.GetExtension( (string)_data[ NAME_KEY ] );
 			if( !PBXFileReference.typeNames.ContainsKey( extension ) ){
-				Debug.LogWarning( "Unknown file extension: " + extension + "\nPlease add extension and Xcode type to PBXFileReference.types" );
+				UnityEngine.Debug.LogWarning( "Unknown file extension: " + extension + "\nPlease add extension and Xcode type to PBXFileReference.types" );
 				return;
 			}
 			

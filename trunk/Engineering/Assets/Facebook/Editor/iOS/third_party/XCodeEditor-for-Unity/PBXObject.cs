@@ -57,7 +57,7 @@ namespace UnityEditor.XCodeEditor
 		{
 			
 			if( !dictionary.ContainsKey( ISA_KEY ) || ((string)dictionary[ ISA_KEY ]).CompareTo( this.GetType().Name ) != 0 )
-				Debug.LogError( "PBXDictionary is not a valid ISA object" );
+				UnityEngine.Debug.LogError( "PBXDictionary is not a valid ISA object" );
 			
 			foreach( KeyValuePair<string, object> item in dictionary ) {
 				_data[ item.Key ] = item.Value;

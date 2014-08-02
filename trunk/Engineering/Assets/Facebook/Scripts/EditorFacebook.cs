@@ -160,7 +160,7 @@ namespace Facebook
             float? valueToSum = null,
             Dictionary<string, object> parameters = null)
         {
-            FbDebug.Log("Pew! Pretending to send this off.  Doesn't actually work in the editor");
+            UnityEngine.Debug.Log("Pew! Pretending to send this off.  Doesn't actually work in the editor");
         }
 
         public override void AppEventsLogPurchase(
@@ -168,7 +168,7 @@ namespace Facebook
             string currency = "USD",
             Dictionary<string, object> parameters = null)
         {
-            FbDebug.Log("Pew! Pretending to send this off.  Doesn't actually work in the editor");
+            UnityEngine.Debug.Log("Pew! Pretending to send this off.  Doesn't actually work in the editor");
         }
 
         #region Editor Mock Login

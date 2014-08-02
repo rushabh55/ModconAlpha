@@ -88,7 +88,7 @@ namespace UnityEditor.XCodeEditor
 		{	
 			FileInfo projectFileInfo = new FileInfo( filename );
 			if( !projectFileInfo.Exists ) {
-				Debug.LogWarning( "File does not exist." );
+				UnityEngine.Debug.LogWarning( "File does not exist." );
 			}
 			
 			name = System.IO.Path.GetFileNameWithoutExtension( filename );

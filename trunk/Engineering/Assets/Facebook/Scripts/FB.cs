@@ -25,7 +25,7 @@ public sealed class FB : ScriptableObject
         {
             if (facebook == null)
             {
-                throw new NullReferenceException("Facebook object is not yet loaded.  Did you call FB.Init()?");
+//                throw new NullReferenceException("Facebook object is not yet loaded.  Did you call FB.Init()?");
             }
             return facebook;
         }
@@ -164,7 +164,7 @@ public sealed class FB : ScriptableObject
         }
         else
         {
-            FbDebug.Log(string.Format("Finished loading Facebook dll. Version {0} Build {1}", versionInfo.SdkVersion, versionInfo.BuildVersion));
+            UnityEngine.Debug.Log(string.Format("Finished loading Facebook dll. Version {0} Build {1}", versionInfo.SdkVersion, versionInfo.BuildVersion));
         }
         FacebookImpl.Init(
             OnInitComplete,
@@ -338,7 +338,7 @@ public sealed class FB : ScriptableObject
         {
             var url = string.Format(IntegratedPluginCanvasLocation.DllUrl, className);
             var www = new WWW(url);
-            FbDebug.Log("loading dll: " + url);
+            UnityEngine.Debug.Log("loading dll: " + url);
             yield return www;
 
             if (www.error != null)

@@ -9,8 +9,23 @@ public class DebugPanel : MonoBehaviour {
 	// Use this for initialization
 	void Start () 
     {
+        FB.Init(onInitComplete);
+        FB.Login("", loginComplete);
         _objCollection.Append("yo");
 	}
+
+    private void loginComplete(FBResult result)
+    {
+        if ( result.Error != null )
+        {
+           // UnityEngine.Debug.Log("Logged in ");
+        }
+    }
+
+    private void onInitComplete()
+    {
+        FB.Login("", loginComplete);
+    }
 	
 	// Update is called once per frame
 	void Update () 

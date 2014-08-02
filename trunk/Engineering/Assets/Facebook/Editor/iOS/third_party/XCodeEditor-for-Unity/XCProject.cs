@@ -55,7 +55,7 @@ namespace UnityEditor.XCodeEditor
 		public XCProject( string filePath ) : this()
 		{
 			if( !System.IO.Directory.Exists( filePath ) ) {
-				Debug.LogWarning( "Path does not exists." );
+				UnityEngine.Debug.LogWarning( "Path does not exists." );
 				return;
 			}
 			
@@ -65,7 +65,7 @@ namespace UnityEditor.XCodeEditor
 			} else {
 				string[] projects = System.IO.Directory.GetDirectories( filePath, "*.xcodeproj" );
 				if( projects.Length == 0 ) {
-					Debug.LogWarning( "Error: missing xcodeproj file" );
+					UnityEngine.Debug.LogWarning( "Error: missing xcodeproj file" );
 					return;
 				}
 				
@@ -83,7 +83,7 @@ namespace UnityEditor.XCodeEditor
 			}
 
 			if( !_datastore.ContainsKey( "objects" ) ) {
-				Debug.Log( "Errore " + _datastore.Count );
+				UnityEngine.Debug.Log( "Errore " + _datastore.Count );
 				return;
 			}
 			
@@ -96,7 +96,7 @@ namespace UnityEditor.XCodeEditor
 				_rootGroup = new PBXGroup( _rootObjectKey, (PBXDictionary)_objects[ _project.mainGroupID ] );
 			}
 			else {
-				Debug.LogWarning( "Error: project has no root object" );
+				UnityEngine.Debug.LogWarning( "Error: project has no root object" );
 				_project = null;
 				_rootGroup = null;
 			}
@@ -361,10 +361,10 @@ namespace UnityEditor.XCodeEditor
 						}
 						break;
 					case null:
-						Debug.LogWarning( "fase non supportata null" );
+						UnityEngine.Debug.LogWarning( "fase non supportata null" );
 						break;
 					default:
-						Debug.LogWarning( "fase non supportata def" );
+						UnityEngine.Debug.LogWarning( "fase non supportata def" );
 						return null;
 				}
 			}
@@ -391,17 +391,17 @@ namespace UnityEditor.XCodeEditor
 			
 			foreach( string directory in Directory.GetDirectories( folderPath ) )
 			{
-				Debug.Log( "DIR: " + directory );
+				UnityEngine.Debug.Log( "DIR: " + directory );
 				if( directory.EndsWith( ".bundle" ) ) {
 					// Treath it like a file and copy even if not recursive
-					Debug.LogWarning( "This is a special folder: " + directory );
+					UnityEngine.Debug.LogWarning( "This is a special folder: " + directory );
 					AddFile( directory, newGroup, "SOURCE_ROOT", createBuildFile );
-					Debug.Log( "fatto" );
+					UnityEngine.Debug.Log( "fatto" );
 					continue;
 				}
 				
 				if( recursive ) {
-					Debug.Log( "recursive" );
+					UnityEngine.Debug.Log( "recursive" );
 					AddFolder( directory, newGroup, exclude, recursive, createBuildFile );
 				}
 			}

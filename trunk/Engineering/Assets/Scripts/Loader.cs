@@ -15,8 +15,8 @@ public class Loader : MonoBehaviour {
     {
         __bgObj.transform.localScale = new Vector3(Screen.height / Vector3.Distance(Camera.main.transform.position, __bgObj.transform.position), Screen.width / Vector3.Distance(Camera.main.transform.position, __bgObj.transform.position), 1);
         Camera.main.transform.LookAt(__bgObj.transform);
-        Debug.Log("Added ");
-        Debug.Log(obj);
+        UnityEngine.Debug.Log("Added ");
+        UnityEngine.Debug.Log(obj);
         __list.Add((Object)obj);
     }
 	// Use this for initialization
@@ -24,7 +24,7 @@ public class Loader : MonoBehaviour {
         var t = GameObject.FindGameObjectsWithTag("Untagged"); 
         if ( t.Length == 0 )
         {
-            Debug.Log("0");
+            UnityEngine.Debug.Log("0");
         }
         object[] allObjects = FindObjectsOfTypeAll(typeof(GameObject));
         foreach (object thisObject in allObjects)
@@ -48,7 +48,7 @@ public class Loader : MonoBehaviour {
         }
         catch (System.Exception e)
         {
-          //  Debug.Log(e.Message);
+          //  UnityEngine.Debug.Log(e.Message);
           //  fs.Close();
         }
     }

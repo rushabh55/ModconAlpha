@@ -27,7 +27,7 @@ public class ObjectBuilderScript : MonoBehaviour
 			if (((GameObject) thisObject).activeInHierarchy)
 			{
 				obj.Add ((GameObject) thisObject);
-				Debug.Log (" Printing " + thisObject);
+				UnityEngine.Debug.Log (" Printing " + thisObject);
 			}
 		}
 		SerializableGameObjectWrapper.serialize(obj);
@@ -35,7 +35,7 @@ public class ObjectBuilderScript : MonoBehaviour
 
 	public void DeserializeObject() {
         var a = SerializableGameObjectWrapper.read();
-        Debug.Log("New");
+        UnityEngine.Debug.Log("New");
 	}
 }
 

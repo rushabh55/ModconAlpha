@@ -51,7 +51,7 @@ namespace UnityEditor.FacebookEditor
             
             if(string.IsNullOrEmpty(appId) || appId.Equals("0"))
             {
-                Debug.LogError("You didn't specify a Facebook app ID.  Please add one using the Facebook menu in the main Unity editor.");
+                UnityEngine.Debug.LogError("You didn't specify a Facebook app ID.  Please add one using the Facebook menu in the main Unity editor.");
                 return;
             }
             
@@ -61,7 +61,7 @@ namespace UnityEditor.FacebookEditor
             var dict = FindPlistDictNode(doc);
             if(dict == null)
             {
-                Debug.LogError("Error parsing " + fullPath);
+                UnityEngine.Debug.LogError("Error parsing " + fullPath);
                 return;
             }
             
