@@ -72,6 +72,7 @@
      <Compile Include="Assets\Scripts\Serializable\SerializableTransform.cs" />
      <Compile Include="Assets\Scripts\Serializable\SerializableVector.cs" />
      <Compile Include="Assets\Scripts\translate.cs" />
+     <Compile Include="Assets\WorkerController.cs" />
      <Compile Include="Assets\iTween\iTween.cs" />
      <None Include="Assets\Standard Assets\Projectors\Guidelines.txt" />
      <None Include="Assets\Plugins\Android\facebook\res\values\attrs.xml" />
