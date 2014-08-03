@@ -1,4 +1,9 @@
-﻿using UnityEngine;
+﻿
+#if !DEBUG
+using UnityEngine;
+using System.Collections;
+#if UNITY_WINDOWS
+using UnityEngine;
 using System.Collections;
 using System.Xml.Serialization;
 using Assets;
@@ -19,8 +24,8 @@ public class Loader : MonoBehaviour {
         UnityEngine.Debug.Log(obj);
         __list.Add((Object)obj);
     }
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
         var t = GameObject.FindGameObjectsWithTag("Untagged"); 
         if ( t.Length == 0 )
         {
@@ -34,7 +39,7 @@ public class Loader : MonoBehaviour {
                 AddData((GameObject)thisObject);
             }
         Serialize();
-	}
+    }
 
     private void Serialize()
     {
@@ -53,9 +58,11 @@ public class Loader : MonoBehaviour {
         }
     }
 	
-	// Update is called once per frame
-	void Update () {
+    // Update is called once per frame
+    void Update () {
         if( Input.touchCount > 0 )
-	    __bgObj.transform.Translate(new Vector3(Input.acceleration.x, 0, -Input.acceleration.z ));
-	}
+        __bgObj.transform.Translate(new Vector3(Input.acceleration.x, 0, -Input.acceleration.z ));
+    }
 }
+#endif
+#endif

@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿
+#if UNITY_WINDOWS
+using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using System.Xml.Serialization;
@@ -44,3 +46,4 @@ public class ObjectBuilderScript : MonoBehaviour
 
 
 
+#endif
