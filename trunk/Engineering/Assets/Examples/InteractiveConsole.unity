@@ -4,13 +4,12 @@
 SceneSettings:
   m_ObjectHideFlags: 0
   m_PVSData: 
-  m_QueryMode: 1
   m_PVSObjectsArray: []
   m_PVSPortalsArray: []
   m_OcclusionBakeSettings:
-    viewCellSize: 1
-    bakeMode: 2
-    memoryUsage: 10485760
+    smallestOccluder: 5
+    smallestHole: .25
+    backfaceThreshold: 100
 --- !u!104 &2
 RenderSettings:
   m_Fog: 0
@@ -23,6 +22,7 @@ RenderSettings:
   m_SkyboxMaterial: {fileID: 0}
   m_HaloStrength: .5
   m_FlareStrength: 1
+  m_FlareFadeSpeed: 3
   m_HaloTexture: {fileID: 0}
   m_SpotCookie: {fileID: 0}
   m_ObjectHideFlags: 0
@@ -141,7 +141,11 @@ Camera:
     m_Bits: 4294967295
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 0
   m_HDR: 0
+  m_OcclusionCulling: 1
+  m_StereoConvergence: 10
+  m_StereoSeparation: .0219999999
 --- !u!4 &787078731
 Transform:
   m_ObjectHideFlags: 0
@@ -153,6 +157,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
+  m_RootOrder: 1
 --- !u!1 &1988862590
 GameObject:
   m_ObjectHideFlags: 0
@@ -161,7 +166,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1988862591}
-  - 114: {fileID: 1988862593}
+  - 114: {fileID: 1988862592}
   m_Layer: 0
   m_Name: Interactive Console
   m_TagString: Untagged
@@ -180,7 +185,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
---- !u!114 &1988862593
+  m_RootOrder: 0
+--- !u!114 &1988862592
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -190,6 +196,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 03b00f762de2a4049a7ea31cc09cc693, type: 3}
   m_Name: 
+  m_EditorClassIdentifier: 
   FriendSelectorTitle: 
   FriendSelectorMessage: Derp
   FriendSelectorFilters: '["all","app_users","app_non_users"]'
@@ -198,23 +205,30 @@ MonoBehaviour:
   FriendSelectorMax: 
   DirectRequestTitle: 
   DirectRequestMessage: Herp
-  FeedFromId: 
   FeedToId: 
-  FeedLink: http://www.facebook.com
-  FeedLinkName: Facebook!
-  FeedLinkCaption: This is a caption.
-  FeedLinkDescription: This is a description.
+  FeedLink: 
+  FeedLinkName: 
+  FeedLinkCaption: 
+  FeedLinkDescription: 
   FeedPicture: 
   FeedMediaSource: 
   FeedActionName: 
   FeedActionLink: 
   FeedReference: 
   IncludeFeedProperties: 0
+  PayProduct: 
   ApiQuery: 
+  PlayerLevel: 1
+  Width: 800
+  Height: 600
+  CenterHorizontal: 1
+  CenterVertical: 0
+  Top: 10
+  Left: 10
   textStyle:
     m_Name: 
     m_Normal:
-      m_Background: {fileID: 2800000, guid: ad601710207179c4a8e5f5ca60f4aeb6, type: 3}
+      m_Background: {fileID: 0}
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Hover:
       m_Background: {fileID: 0}
