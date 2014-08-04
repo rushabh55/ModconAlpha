@@ -13,7 +13,7 @@ public class InputManager : MonoBehaviour {
 	    if ( Input.touchCount > 0 )
         {
             Vector3 delta = Input.acceleration;
-            __objectToControl.transform.Translate(new Vector3(delta.x * 0.1f, 0, delta.z * 0.1f));
+            __objectToControl.transform.Translate(new Vector3(delta.x * 0.1f, 0, -delta.y * 0.1f));
             DebugPanel.AddText( delta.ToString() );
         }
 	}

@@ -5,7 +5,9 @@ import java.util.*;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
+import android.annotation.TargetApi;
 import android.content.Intent;
+import android.os.Build;
 import android.text.TextUtils;
 
 import android.app.Activity;
@@ -19,6 +21,7 @@ import com.facebook.*;
 import com.facebook.Session.Builder;
 import com.facebook.Session.OpenRequest;
 import com.facebook.Session.StatusCallback;
+import com.facebook.internal.Utility;
 import com.facebook.model.*;
 import com.facebook.widget.WebDialog;
 import com.facebook.widget.WebDialog.OnCompleteListener;
@@ -30,6 +33,8 @@ public class FB {
 	static final String FB_UNITY_OBJECT = "UnityFacebookSDKPlugin";
 	private static Intent intent;
     private static AppEventsLogger appEventsLogger;
+
+    private static String appID;
 
     private static Boolean frictionlessRequests = false;
 
@@ -45,16 +50,39 @@ public class FB {
 	}
 
 
-	private static Activity getUnityActivity() {
+	static Activity getUnityActivity() {
 		return UnityPlayer.currentActivity;
 	}
 
 	private static void initAndLogin(String params, final boolean show_login_dialog, final Activity activity) {
-		Session session = (FB.isLoggedIn()) ? Session.getActiveSession() : new Builder(activity).build();
+        String[] parts = null;
+        UnityParams unity_params = UnityParams.parse(params, "couldn't parse login params: " + params);
+
+        if (unity_params.hasString("appId")) {
+            // override the app id from the android manifest from FB.Init() if it's there
+            appID = unity_params.getString("appId");
+        } else if (appID == null || appID.length() == 0) {
+            // default: use the app id from the metadata
+            appID = Utility.getMetadataApplicationId(activity);
+        } // else there's an appID provided
+
+        Session session;
+        if (FB.isLoggedIn()) {
+            session = Session.getActiveSession();
+
+            // this shouldn't be an issue for most people: the app id in the session not matching the one provided
+            // instead it can probably happen if a developer wants to switch app ids at run time.
+            if (appID != session.getApplicationId()) {
+                Log.w(TAG, "App Id in active session ("+ session.getApplicationId() +") doesn't match App Id passed in: " + appID);
+                session = new Builder(activity).setApplicationId(appID).build();
+            }
+        } else {
+            session = new Builder(activity).setApplicationId(appID).build();
+        }
+
         final UnityMessage unityMessage = new UnityMessage((show_login_dialog) ? "OnLoginComplete" : "OnInitComplete");
 
         // add the key hash to the JSON dictionary
-        // unityMessage.put("key_hash", "test_key_and");
         unityMessage.put("key_hash", getKeyHash());
 
         // if we are init-ing, we can just return here if there is no active session
@@ -64,8 +92,6 @@ public class FB {
         }
 
 		// parse and separate the permissions into read and publish permissions
-        String[] parts = null;
-        UnityParams unity_params = UnityParams.parse(params, "couldn't parse login params: " + params);
         if (unity_params.hasString("scope")) {
             parts = unity_params.getString("scope").split(",");
         }
@@ -73,6 +99,9 @@ public class FB {
         List<String> readPermissions = new ArrayList<String>();
         if(parts != null && parts.length > 0) {
             for(String s:parts) {
+                if(s.length() == 0) {
+                    continue;
+                }
                 if(Session.isPublishPermission(s)) {
                     publishPermissions.add(s);
                 } else {
@@ -167,7 +196,7 @@ public class FB {
                 // if the access token is there, try to get it anyways
 
                 // add a callback to update the access token when it changes
-                session.addCallback(new StatusCallback(){
+                session.addCallback(new StatusCallback() {
                     @Override
                     public void call(Session session,
                                      SessionState state, Exception exception) {
@@ -182,7 +211,7 @@ public class FB {
                 });
                 unityMessage.put("access_token", session.getAccessToken());
                 unityMessage.put("expiration_timestamp", "" + session.getExpirationDate().getTime() / 1000);
-                Request.executeMeRequestAsync(session, new Request.GraphUserCallback() {
+                Request.newMeRequest(session, new Request.GraphUserCallback() {
                     @Override
                     public void onCompleted(GraphUser user, Response response) {
                         if (user != null) {
@@ -190,7 +219,7 @@ public class FB {
                         }
                         unityMessage.send();
                     }
-                });
+                }).executeAsync();
             }
         };
 
@@ -398,18 +427,8 @@ public class FB {
 		if (unity_params.hasString("callback_id")) {
 			unityMessage.put("callback_id", unity_params.getString("callback_id"));
 		}
-		Settings.publishInstallAsync(getUnityActivity().getApplicationContext(), unity_params.getString("app_id"), new Request.Callback() {
-
-			@Override
-			public void onCompleted(Response response) {
-				if(response.getError() != null) {
-					unityMessage.sendError(response.getError().toString());
-				} else {
-					unityMessage.send();
-				}
-
-			}
-		});
+        AppEventsLogger.activateApp(getUnityActivity().getApplicationContext());
+        unityMessage.send();
 	}
 
     @UnityCallable
@@ -429,7 +448,7 @@ public class FB {
     }
 
     public static void SetLimitEventUsage(String params) {
-        AppEventsLogger.setLimitEventUsage(getUnityActivity().getApplicationContext(), Boolean.valueOf(params));
+        Settings.setLimitEventAndDataUsage(getUnityActivity().getApplicationContext(), Boolean.valueOf(params));
     }
 
     @UnityCallable
@@ -459,6 +478,7 @@ public class FB {
             Log.e(TAG, "couldn't logPurchase or logEvent params: "+params);
         }
     }
+
     /**
      * This is to be called from Unity Login activity to call session callback after login activity completes
      * @param activity
@@ -474,6 +494,7 @@ public class FB {
      * Provides the key hash to solve the openSSL issue with Amazon
      * @return key hash
      */
+    @TargetApi(Build.VERSION_CODES.FROYO)
     private static String getKeyHash() {
         try {
             PackageInfo info = getUnityActivity().getPackageManager().getPackageInfo(

@@ -1,7 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
+using Assets.Scripts.Base;
 
-public class WorkerController : MonoBehaviour {
+public class WorkerController : MonoBehaviour , IExplode
+{
     public ParticleSystem _partSystem = null;
     public GameObject _player = null;
 	// Use this for initialization
@@ -13,14 +15,12 @@ public class WorkerController : MonoBehaviour {
 	void Update () {
         if (Input.GetKeyDown(KeyCode.Space) || Input.touchCount > 1)
         {
-            //var objs = this.gameObject.GetComponentsInChildren(typeof(Renderer));
-            //foreach ( Renderer renderer in objs )
-            //{
-            //    var color = renderer.material.color;
-            //    color.a = 0;
-            //    renderer.material.color = color;
-            //}
             _partSystem.Emit(2500);
         }
 	}
+
+    public void Explode()
+    {
+
+    }
 }
