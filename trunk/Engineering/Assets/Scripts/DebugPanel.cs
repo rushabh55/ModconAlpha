@@ -14,11 +14,14 @@ public class DebugPanel : MonoBehaviour {
 	
 	}
 
-    public static void AddText( string s )
-    {
-        _objCollection = null;
-        _objCollection = new StringBuilder();
-        _objCollection.Append(s);
+    public static void AddText( string s, bool erase = false )
+    {        
+        if ( erase )
+        {
+            _objCollection = null;
+            _objCollection = new StringBuilder();
+        }
+        _objCollection.Append(s + "\n");
     }
 
     void OnGUI()

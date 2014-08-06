@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using UnityEngine;
 
 namespace Assets.Scripts.Serializable
 {
@@ -25,5 +26,13 @@ namespace Assets.Scripts.Serializable
             return s;
         }
 
+        public static Vector3 convertFromVec(SerializableVector v)
+        {
+            Vector3 vec = new Vector3();
+            vec.x = v.x;
+            vec.y = v.y;
+            vec.z = v.z;
+            return vec;
+        }
     }
 }

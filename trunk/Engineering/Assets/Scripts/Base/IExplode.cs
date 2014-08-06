@@ -8,5 +8,6 @@ namespace Assets.Scripts.Base
     interface IExplode
     {
         void Explode();
+        void Respawn();
     }
 }

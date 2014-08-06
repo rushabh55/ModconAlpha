@@ -60,6 +60,7 @@
      <Compile Include="Assets\Facebook\Scripts\IOSFacebookLoader.cs" />
      <Compile Include="Assets\Facebook\Scripts\NativeDialogModes.cs" />
      <Compile Include="Assets\Scripts\Base\IExplode.cs" />
+     <Compile Include="Assets\Scripts\Base\TransformCollection.cs" />
      <Compile Include="Assets\Scripts\DebugPanel.cs" />
      <Compile Include="Assets\Scripts\FacebookAuth.cs" />
      <Compile Include="Assets\Scripts\LevelData.cs" />
