@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public static class AppSettings
+public static  class AppSettings
 {
     //Public
     public static float speed
