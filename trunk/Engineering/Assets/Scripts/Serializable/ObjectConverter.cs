@@ -35,4 +35,5 @@ namespace Assets.Scripts.Serializable
             return vec;
         }
     }
+
 }
