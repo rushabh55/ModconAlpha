@@ -225,7 +225,7 @@ Transform:
   - {fileID: 417886804}
   - {fileID: 1240665766}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
 --- !u!75 &82084166
 ConstantForce:
   m_ObjectHideFlags: 0
@@ -4333,7 +4333,7 @@ Transform:
   - {fileID: 1306453489}
   - {fileID: 972611071}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
 --- !u!114 &2124984544
 MonoBehaviour:
   m_ObjectHideFlags: 0
