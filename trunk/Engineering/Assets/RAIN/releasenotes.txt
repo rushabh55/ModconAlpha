@@ -1,4 +1,0 @@
-RAIN{indie} v1.3.4
---------------
-
-To view the latest release notes, visit http://support.rivaltheory.com/documentation

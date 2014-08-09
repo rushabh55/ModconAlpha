@@ -33,7 +33,7 @@ public class EventInvoker : MonoBehaviour {
             {
                 var adjPos = globals.GetComponent<AdjustPositions>();
                 adjPos.Reposition();
-                t.enabled = false;
+                //t.enabled = false;
             }
            // player.renderer.enabled = false;
         }
