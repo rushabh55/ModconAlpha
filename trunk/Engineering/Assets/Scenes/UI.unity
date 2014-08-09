@@ -120,7 +120,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 63207845}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -252,14 +252,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 421557561}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eaf800363514a1e40a42859f1bcc70f5, type: 3}
+  m_Script: {fileID: 11500000, guid: c4e09f864107a3949939b37bed8b1fe2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _camera: {fileID: 421557565}
   _objsToHide:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 1952277088}
+  - {fileID: 982344008}
+  - {fileID: 2082674163}
 --- !u!1 &667806926
 GameObject:
   m_ObjectHideFlags: 0
