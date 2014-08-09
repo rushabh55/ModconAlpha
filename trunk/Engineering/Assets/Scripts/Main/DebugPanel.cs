@@ -31,7 +31,7 @@ public class DebugPanel : MonoBehaviour {
         GUI.TextArea(__BoxPosition, _objCollection.ToString());
         GUI.skin.label.fontSize = 30;
         GUI.Label(new Rect(__BoxPosition.x + __BoxPosition.width, __BoxPosition.y, 250, 75), "FPS : " + (1f / Time.deltaTime).ToString());
-      //  GUI.Label(new Rect(__BoxPosition.x, __BoxPosition.y + __BoxPosition.height, 250, 75), "playerPos : " + _player.);
+        GUI.Label(new Rect(__BoxPosition.x, __BoxPosition.y + __BoxPosition.height, 250, 75), "playerPos : " + _player.transform.position);
 
     }
 

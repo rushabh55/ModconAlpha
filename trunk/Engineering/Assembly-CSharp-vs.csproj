@@ -59,7 +59,7 @@
      <Compile Include="Assets\Facebook\Scripts\IOSFacebook.cs" />
      <Compile Include="Assets\Facebook\Scripts\IOSFacebookLoader.cs" />
      <Compile Include="Assets\Facebook\Scripts\NativeDialogModes.cs" />
-     <Compile Include="Assets\Scripts\Base\IExplode.cs" />
+     <Compile Include="Assets\Scripts\Base\ILevelObject.cs" />
      <Compile Include="Assets\Scripts\Base\TransformCollection.cs" />
      <Compile Include="Assets\Scripts\Main\AdjustPositions.cs" />
      <Compile Include="Assets\Scripts\Main\Constants.cs" />

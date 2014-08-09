@@ -25,7 +25,6 @@ public class TapMouseRayCast : MonoBehaviour {
             if ( Input.GetMouseButton(0))
             {
                 var pos = _camera.ScreenToWorldPoint(Input.mousePosition);
-                //Debug.Log("start" + Input.mousePosition); 
                 Debug.Log("end" + pos);
                 CheckForRayCollisions(pos);
             }
@@ -35,34 +34,16 @@ public class TapMouseRayCast : MonoBehaviour {
     void CheckForRayCollisions(Vector3 pos)
     {
         RaycastHit hit = new RaycastHit();
-        Ray ray = new Ray(pos, new Vector3(0, 0, -1));
+        Ray ray = _camera.ScreenPointToRay(pos);
         Debug.DrawLine(ray.origin,ray.direction, Color.green);
         if( Physics.Raycast(ray, out hit, 200 ))
         {
             if( hit.collider.name == "Play")
             {
                 Debug.Log("play" + hit.collider.name);
+                Application.LoadLevel(0);
             }
         }
-
-
-        Ray ray1 = Camera.main.ScreenPointToRay(Input.mousePosition);
-       ;//hit exits now
-       if (Physics.Raycast(ray1, out hit))
-       {
-           if (hit.collider.name == "Play")
-           {
-               Debug.Log("play" + hit.collider.name);
-               hit.collider.renderer.material.color = Color.green;
-           }
-       }
-       else
-       {
-           foreach (var t in _objsToHide)
-           {
-               t.renderer.material.color = Color.red;
-           }
-       }
     }
 
     void OnGUI()

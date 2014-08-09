@@ -5,9 +5,11 @@ using System.Text;
 
 namespace Assets.Scripts.Base
 {
-    interface IExplode
+    interface ILevelObject
     {
+        void InitializePosition();
         void Explode();
-        void Respawn();
+        void LevelEnd();
+
     }
 }
