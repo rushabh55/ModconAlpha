@@ -21,12 +21,15 @@ public class AdjustPositions : MonoBehaviour
     {
         _start.transform.position = pole1.transform.position;
         var pos = _start.transform.position;
-        pos.z += (float)pole1.renderer.bounds.size.y / 2 * (float)pole1.transform.localScale.y - ((int)((BoxCollider)_player.collider).size.y << 1);
+        pos.y = (float)pole1.renderer.bounds.size.y / 2 - ((int)((BoxCollider)_player.collider).size.y );
         _start.transform.position = pos;
 
         _target.transform.position = pole2.transform.position;
         pos = _target.transform.position;
-        pos.z += (float)pole2.renderer.bounds.size.y / 2 * (float)pole2.transform.localScale.y - ((int)((BoxCollider)_player.collider).size.y << 1);
+        var t = ((int)((BoxCollider)_player.collider).size.y << 1);
+        Debug.Log(t);
+        pos.y = (float)pole2.renderer.bounds.size.y / 2 - ((int)((BoxCollider)_player.collider).size.y );
+        pos.z = pole2.transform.position.z;
         _target.transform.position = pos;
     }
 	// Update is called once per frame
