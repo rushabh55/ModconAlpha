@@ -14,6 +14,7 @@ public class InputManager : MonoBehaviour
 	// Use this for initialization
 	void Start () 
     {
+        //_camera.transform.LookAt(_player.transform);
 	}
 
     public void GetTarget()
