@@ -27,15 +27,11 @@ public class EventInvoker : MonoBehaviour {
     {
         if (col.Equals(player.collider))
         {
-            this.enabled = false;
-            Destroy(this);
             foreach (var t in player.GetComponentsInChildren<Renderer>())
             {
                 var adjPos = globals.GetComponent<AdjustPositions>();
                 adjPos.Reposition();
-                //t.enabled = false;
             }
-           // player.renderer.enabled = false;
         }
     }
 }

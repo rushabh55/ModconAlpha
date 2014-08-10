@@ -52,9 +52,7 @@ public class SimplePlayerTranslate : MonoBehaviour
         {
             if (hit.collider.name == "Worker")
             {
-                Debug.Log("Collided");
-                DebugPanel.AddText("Collided");
-                _explosionParticleSystem.Emit(400);
+                _explosionParticleSystem.Emit(250);
             }
         }
     }
@@ -66,11 +64,9 @@ public class SimplePlayerTranslate : MonoBehaviour
         playerPosition.x *= -1;
         var posToCheck = new Vector2(playerPosition.x, playerPosition.y);
        
-        DebugPanel.AddText(posToCheck.ToString(), true);
-        DebugPanel.AddText(r.ToString());
         if ( r.Contains ( posToCheck ))
         {
-            DebugPanel.AddText("Collided");
+
         }
     }
 

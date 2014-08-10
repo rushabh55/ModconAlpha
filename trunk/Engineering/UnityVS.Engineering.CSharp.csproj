@@ -73,6 +73,7 @@
     <Compile Include="Assets\Facebook\Scripts\IOSFacebook.cs" />
     <Compile Include="Assets\Facebook\Scripts\IOSFacebookLoader.cs" />
     <Compile Include="Assets\Facebook\Scripts\NativeDialogModes.cs" />
+    <Compile Include="Assets\PauseScript.cs" />
     <Compile Include="Assets\Scripts\Base\ILevelObject.cs" />
     <Compile Include="Assets\Scripts\Base\TransformCollection.cs" />
     <Compile Include="Assets\Scripts\Main\AdjustPositions.cs" />
@@ -87,7 +88,6 @@
     <Compile Include="Assets\Scripts\Main\SimplePlayerTranslate.cs" />
     <Compile Include="Assets\Scripts\Main\TapMouseRayCast.cs" />
     <Compile Include="Assets\Scripts\Main\WorkerController.cs" />
-    <Compile Include="Assets\Scripts\Manager\InputManager.cs" />
     <Compile Include="Assets\Scripts\Serializable\ObjectConverter.cs" />
     <Compile Include="Assets\Scripts\Serializable\SerializableGameObject.cs" />
     <Compile Include="Assets\Scripts\Serializable\SerializableGameObjectWrapper.cs" />
