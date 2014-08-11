@@ -80,6 +80,7 @@ public class SimplePlayerTranslate : MonoBehaviour
     {
         try
         {
+            Debug.Log("Touch Update");
             var pos = Input.touches[0].position;
             crossHair.pixelInset = new Rect(pos.x, pos.y, crossHair.pixelInset.width, crossHair.pixelInset.height);
         }

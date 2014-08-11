@@ -56,12 +56,12 @@ Material:
       data:
         first:
           name: _Parallax
-        second: .0170535706
+        second: .00499999989
     m_Colors:
       data:
         first:
           name: _Color
-        second: {r: .811764717, g: .811764717, b: .811764717, a: 0}
+        second: {r: 1, g: 1, b: 1, a: 0}
       data:
         first:
           name: _SpecColor

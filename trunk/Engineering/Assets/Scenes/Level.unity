@@ -247,7 +247,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1500000, guid: 88324f760c579473199bfbc4f1073097, type: 2}
       propertyPath: m_Ellipsoid.x
-      value: 150
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 1500000, guid: 88324f760c579473199bfbc4f1073097, type: 2}
       propertyPath: m_Ellipsoid.z
@@ -259,7 +259,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1500000, guid: 88324f760c579473199bfbc4f1073097, type: 2}
       propertyPath: maxEmission
-      value: 800
+      value: 700
       objectReference: {fileID: 0}
     - target: {fileID: 1500000, guid: 88324f760c579473199bfbc4f1073097, type: 2}
       propertyPath: m_Ellipsoid.y
@@ -355,7 +355,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 88324f760c579473199bfbc4f1073097, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1500000, guid: 88324f760c579473199bfbc4f1073097, type: 2}
+      propertyPath: maxSize
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1500000, guid: 88324f760c579473199bfbc4f1073097, type: 2}
+      propertyPath: minSize
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1200000, guid: 88324f760c579473199bfbc4f1073097, type: 2}
+      propertyPath: sizeGrow
+      value: .600000024
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 88324f760c579473199bfbc4f1073097, type: 2}
@@ -512,7 +524,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &188201968
 Transform:
   m_ObjectHideFlags: 0
@@ -581,7 +593,7 @@ ParticleAnimator:
     rgba: 7895160
   worldRotationAxis: {x: 1, y: 0, z: 0}
   localRotationAxis: {x: 1, y: 0, z: 0}
-  sizeGrow: .400000006
+  sizeGrow: .600000024
   rndForce: {x: 0, y: 0, z: 0}
   force: {x: 5, y: -2, z: 0}
   damping: .5
@@ -597,12 +609,12 @@ EllipsoidParticleEmitter:
   serializedVersion: 2
   m_Enabled: 1
   m_Emit: 1
-  minSize: 4
-  maxSize: 5
+  minSize: 5
+  maxSize: 7
   minEnergy: 4
   maxEnergy: 6
   minEmission: 10
-  maxEmission: 800
+  maxEmission: 700
   worldVelocity: {x: 0, y: 0, z: 0}
   localVelocity: {x: -20, y: 0, z: 0}
   rndVelocity: {x: 10, y: 10, z: .00999999978}
@@ -613,7 +625,7 @@ EllipsoidParticleEmitter:
   rndRotation: 1
   Simulate in Worldspace?: 1
   m_OneShot: 0
-  m_Ellipsoid: {x: 150, y: 30, z: 150}
+  m_Ellipsoid: {x: 100, y: 30, z: 150}
   m_MinEmitterRange: 0
 --- !u!1 &189243000
 GameObject:
@@ -1919,6 +1931,71 @@ Transform:
   - {fileID: 1281138782}
   m_Father: {fileID: 254953005}
   m_RootOrder: 2
+--- !u!1 &913870269
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 913870272}
+  - 114: {fileID: 913870271}
+  - 154: {fileID: 913870270}
+  m_Layer: 0
+  m_Name: Terrain
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!154 &913870270
+TerrainCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 913870269}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_TerrainData: {fileID: 15600000, guid: b107a1e9d108e8145826a64e11c2108e, type: 2}
+  m_CreateTreeColliders: 1
+--- !u!114 &913870271
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 913870269}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12000, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_TerrainData: {fileID: 15600000, guid: b107a1e9d108e8145826a64e11c2108e, type: 2}
+  m_TreeDistance: 2000
+  m_TreeBillboardDistance: 50
+  m_TreeCrossFadeLength: 5
+  m_TreeMaximumFullLODCount: 50
+  m_DetailObjectDistance: 1
+  m_DetailObjectDensity: 1
+  m_HeightmapPixelError: 4
+  m_SplatMapDistance: 0
+  m_HeightmapMaximumLOD: 0
+  m_CastShadows: 1
+  m_LightmapIndex: -1
+  m_LightmapSize: 1024
+  m_DrawTreesAndFoliage: 1
+  m_MaterialTemplate: {fileID: 0}
+--- !u!4 &913870272
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 913870269}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -285.640686, y: -10.0992279, z: -537.667847}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
 --- !u!1 &925985966
 GameObject:
   m_ObjectHideFlags: 0
@@ -1988,6 +2065,7 @@ GameObject:
   - 92: {fileID: 972611068}
   - 81: {fileID: 972611067}
   - 114: {fileID: 972611072}
+  - 114: {fileID: 972611073}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: Untagged
@@ -2085,6 +2163,17 @@ MonoBehaviour:
   maximumX: 360
   minimumY: -90
   maximumY: 90
+--- !u!114 &972611073
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 972611066}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31c23d6f562e26b4ba986fd8292f4fb4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1017064824
 GameObject:
   m_ObjectHideFlags: 0
@@ -3290,7 +3379,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!23 &1091438388
 Renderer:
   m_ObjectHideFlags: 0

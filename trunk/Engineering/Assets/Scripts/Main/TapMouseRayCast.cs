@@ -49,7 +49,7 @@ public class TapMouseRayCast : MonoBehaviour {
                 {
                     Debug.Log(hit.collider.name);
                     hit.collider.renderer.material.color = Color.green;
-                    Application.LoadLevelAdditive(1);
+                    Application.LoadLevel(1);
                     DebugPanel.AddText("loaded", true);
                 }
                 catch(System.Exception e)
@@ -64,7 +64,7 @@ public class TapMouseRayCast : MonoBehaviour {
     {
         if ( GUI.Button ( new Rect (400, 100, 400, 100), "Load Level"))
         {
-            Application.LoadLevelAdditive(1);
+            Application.LoadLevel(1);
         }
     }
 }

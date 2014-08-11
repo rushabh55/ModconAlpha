@@ -60,6 +60,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\0000 ats V2 package\atsV2 UnityTerrainBump Package\CustomTerrainScriptAtsV2.cs" />
     <Compile Include="Assets\Examples\Scripts\InteractiveConsole.cs" />
     <Compile Include="Assets\Facebook\Scripts\AndroidFacebook.cs" />
     <Compile Include="Assets\Facebook\Scripts\AndroidFacebookLoader.cs" />
@@ -73,10 +74,10 @@
     <Compile Include="Assets\Facebook\Scripts\IOSFacebook.cs" />
     <Compile Include="Assets\Facebook\Scripts\IOSFacebookLoader.cs" />
     <Compile Include="Assets\Facebook\Scripts\NativeDialogModes.cs" />
-    <Compile Include="Assets\PauseScript.cs" />
     <Compile Include="Assets\Scripts\Base\ILevelObject.cs" />
     <Compile Include="Assets\Scripts\Base\TransformCollection.cs" />
     <Compile Include="Assets\Scripts\Main\AdjustPositions.cs" />
+    <Compile Include="Assets\Scripts\Main\CameraMobileZoom.cs" />
     <Compile Include="Assets\Scripts\Main\Constants.cs" />
     <Compile Include="Assets\Scripts\Main\DebugPanel.cs" />
     <Compile Include="Assets\Scripts\Main\EventInvoker.cs" />
@@ -85,6 +86,7 @@
     <Compile Include="Assets\Scripts\Main\Loader.cs" />
     <Compile Include="Assets\Scripts\Main\ObjectBuilderEditor.cs" />
     <Compile Include="Assets\Scripts\Main\ObjectBuilderScript.cs" />
+    <Compile Include="Assets\Scripts\Main\PauseScript.cs" />
     <Compile Include="Assets\Scripts\Main\SimplePlayerTranslate.cs" />
     <Compile Include="Assets\Scripts\Main\TapMouseRayCast.cs" />
     <Compile Include="Assets\Scripts\Main\WorkerController.cs" />
@@ -93,7 +95,20 @@
     <Compile Include="Assets\Scripts\Serializable\SerializableGameObjectWrapper.cs" />
     <Compile Include="Assets\Scripts\Serializable\SerializableTransform.cs" />
     <Compile Include="Assets\Scripts\Serializable\SerializableVector.cs" />
+    <Compile Include="Assets\Scripts\ui\LevelSelect.cs" />
     <Compile Include="Assets\iTween\iTween.cs" />
+    <None Include="Assets\0000 ats V2 package\ats pathShader Package\Shader\ats Road Path bumped diffuse alphatest.shader" />
+    <None Include="Assets\0000 ats V2 package\ats vertexLitShader Package\Shader\atsv2 vertexlit.shader" />
+    <None Include="Assets\0000 ats V2 package\atsV2 billboardShader package\Tree.cginc" />
+    <None Include="Assets\0000 ats V2 package\atsV2 billboardShader package\TreeCreatorBarkRendertex.shader" />
+    <None Include="Assets\0000 ats V2 package\atsV2 billboardShader package\TreeCreatorLeavesRendertex.shader" />
+    <None Include="Assets\0000 ats V2 package\atsV2 grassShader Package\atsV2WavingGrass.shader" />
+    <None Include="Assets\0000 ats V2 package\atsV2 UnityTerrainBump Package\TerrainReplacementAtsV2.shader" />
+    <None Include="Assets\0000 ats V2 package\readme_billboardShader.txt" />
+    <None Include="Assets\0000 ats V2 package\readme_grassShader.txt" />
+    <None Include="Assets\0000 ats V2 package\readme_terrainBumpShader.txt" />
+    <None Include="Assets\0000 ats V2 package\readme_treeBarkShader.txt" />
+    <None Include="Assets\0000 ats V2 package\readme_vertexLitShader.txt" />
     <None Include="Assets\DebugKey.txt" />
     <None Include="Assets\iTween\ReadMe!\ReadMe!.txt" />
     <None Include="Assets\Plugins\Android\AndroidManifest.xml" />
