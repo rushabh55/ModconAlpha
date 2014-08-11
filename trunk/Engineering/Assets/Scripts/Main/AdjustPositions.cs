@@ -10,6 +10,7 @@ public class AdjustPositions : MonoBehaviour
 	void Start () 
     {
         Reposition();
+        Application.targetFrameRate = 10000;
 	}
 
     void Awake()
@@ -33,7 +34,6 @@ public class AdjustPositions : MonoBehaviour
 
         _player.transform.position
              = _start.transform.position;
-        Debug.Log(1);
     }
 	// Update is called once per frame
 	void Update () 

@@ -5,9 +5,31 @@ public class PinchZoom : MonoBehaviour
     public float perspectiveZoomSpeed = 0.5f;        // The rate of change of the field of view in perspective mode.
     public float orthoZoomSpeed = 0.5f;        // The rate of change of the orthographic size in orthographic mode.
 
+    public Camera _activeCamera;
 
+    void Start()
+    {
+        if ( _activeCamera != null )
+        {
+            _activeCamera = this.GetComponent<Camera>();
+        }
+    }
+
+    void Awake()
+    {
+        if (_activeCamera != null)
+        {
+            _activeCamera = this.GetComponent<Camera>();
+        }
+    }
     void Update()
     {
+        if (_activeCamera != null)
+        {
+            _activeCamera = this.GetComponent<Camera>();
+        }
+
+
         // If there are two touches on the device...
         if (Input.touchCount == 2)
         {
@@ -42,6 +64,38 @@ public class PinchZoom : MonoBehaviour
 
                 // Clamp the field of view to make sure it's between 0 and 180.
                 camera.fieldOfView = Mathf.Clamp(camera.fieldOfView, 0.1f, 179.9f);
+            }
+        }
+        else
+        if ( Input.mousePresent && !_activeCamera.isOrthoGraphic)
+        {
+            //var cam = this;
+            //if (Input.GetAxis("Mouse ScrollWheel") > 0) // forward
+            //{
+            //    cam.transform.Translate(-cam.transform.forward);
+            //    Debug.Log(cam.transform.position);
+            //}
+            //if (Input.GetAxis("Mouse ScrollWheel") < 0) // back
+            //{
+            //    cam.transform.Translate(cam.transform.forward);
+            //    Debug.Log(cam.transform.position);
+            //}
+
+            var scrollVal = -Input.GetAxis("Mouse ScrollWheel");
+            if ( scrollVal != 0 )
+            {
+                _activeCamera.fieldOfView += scrollVal * perspectiveZoomSpeed;
+                _activeCamera.fieldOfView = Mathf.Clamp(camera.fieldOfView, 0.1f, 179.9f);
+            }
+        }
+        else
+        if (Input.mousePresent && _activeCamera.isOrthoGraphic)
+        {
+            var scrollVal = -Input.GetAxis("Mouse ScrollWheel");
+            if (scrollVal != 0)
+            {
+                _activeCamera.orthographicSize += scrollVal * perspectiveZoomSpeed;
+                _activeCamera.orthographicSize = Mathf.Max(camera.orthographicSize, 0.1f);
             }
         }
     }

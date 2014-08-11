@@ -66,5 +66,27 @@ public class TapMouseRayCast : MonoBehaviour {
         {
             Application.LoadLevel(1);
         }
+
+        if (GUI.Button (new Rect (Screen.width - 250, Screen.height - 80, 250, 80), "Facebook Login"))
+        {
+            FB.Init(onInitComplete, onHideunity);
+            DebugPanel.AddText("Init FB", true);
+        }
+    }
+
+    private void onHideunity(bool isUnityShown)
+    {
+        DebugPanel.AddText("onHideunity" + isUnityShown, true);
+    }
+
+    private void onInitComplete()
+    {
+        FB.Login("user_about_me, user_activities, user_birthday, public_profile, user_friends, email", onLoginCallback);
+        DebugPanel.AddText("INIT COMPLETE",true);
+    }
+
+    private void onLoginCallback(FBResult result)
+    {
+        DebugPanel.AddText(result.Text + "LOGGED IN", true);
     }
 }

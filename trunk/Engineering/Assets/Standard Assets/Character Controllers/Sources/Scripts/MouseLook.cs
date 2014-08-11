@@ -33,7 +33,7 @@ public class MouseLook : MonoBehaviour {
 
 	void Update ()
 	{
-        if (isActive && Input.GetMouseButton(0))
+        if (isActive && (Input.GetMouseButton(1) || Input.touchCount >= 3))
         {
             if (axes == RotationAxes.MouseXAndY)
             {

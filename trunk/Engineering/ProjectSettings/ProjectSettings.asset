@@ -7,7 +7,7 @@ PlayerSettings:
   AndroidProfiler: 1
   defaultScreenOrientation: 4
   targetDevice: 2
-  targetGlesGraphics: 2
+  targetGlesGraphics: 1
   targetResolution: 0
   accelerometerFrequency: 60
   companyName: Modcon
@@ -18,12 +18,12 @@ PlayerSettings:
   defaultScreenHeight: 768
   defaultScreenWidthWeb: 960
   defaultScreenHeightWeb: 600
-  m_RenderingPath: 1
-  m_MobileRenderingPath: 2
+  m_RenderingPath: 2
+  m_MobileRenderingPath: 0
   m_ActiveColorSpace: 0
   m_MTRendering: 1
   m_MobileMTRendering: 1
-  m_UseDX11: 0
+  m_UseDX11: 1
   m_Stereoscopic3D: 0
   iosShowActivityIndicatorOnLoading: -1
   androidShowActivityIndicatorOnLoading: 0
@@ -38,7 +38,7 @@ PlayerSettings:
   defaultIsFullScreen: 1
   defaultIsNativeResolution: 1
   runInBackground: 1
-  captureSingleScreen: 0
+  captureSingleScreen: 1
   Override IPod Music: 0
   Prepare IOS For Recording: 0
   enableHWStatistics: 1
@@ -85,7 +85,7 @@ PlayerSettings:
   iPhoneTargetOSVersion: 16
   uIPrerenderedIcon: 0
   uIRequiresPersistentWiFi: 0
-  uIStatusBarHidden: 1
+  uIStatusBarHidden: 0
   uIExitOnSuspend: 0
   uIStatusBarStyle: 0
   iPhoneSplashScreen: {fileID: 0}
@@ -107,6 +107,9 @@ PlayerSettings:
       m_Size: 128
   m_BuildTargetBatching:
   - m_BuildTarget: Android
+    m_StaticBatching: 1
+    m_DynamicBatching: 1
+  - m_BuildTarget: Standalone
     m_StaticBatching: 1
     m_DynamicBatching: 1
   webPlayerTemplate: APPLICATION:Default
