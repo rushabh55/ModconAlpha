@@ -37,10 +37,9 @@ public class EditorFacebookAccessToken : MonoBehaviour
     } 
 
     void OnGUI()
-    {
-        
-        var windowTop = Screen.height / 2 - windowHeight / 2;
-        var windowLeft = Screen.width / 2 - windowWidth / 2;
+    {        
+        var windowTop = Screen.height >> 1 - (int)windowHeight >> 1;
+        var windowLeft = Screen.width >> 1 - (int)windowWidth >> 1;
         if (fbSkin != null)
         {
             GUI.skin = fbSkin;

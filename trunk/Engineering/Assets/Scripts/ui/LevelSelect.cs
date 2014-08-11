@@ -15,7 +15,7 @@ public class LevelSelect : MonoBehaviour
     {
 	    if ( Input.touchCount > 0 || Input.GetMouseButton(0))
         {
-            Application.LoadLevel(0);
+            Application.LoadLevel(2);
         }
 	}
 }
