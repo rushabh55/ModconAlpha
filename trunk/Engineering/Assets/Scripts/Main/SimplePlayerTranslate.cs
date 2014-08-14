@@ -85,7 +85,10 @@ public class SimplePlayerTranslate : MonoBehaviour
         }
         catch(System.Exception e)
         {
-
+            if (e.GetType() != typeof(System.IndexOutOfRangeException))
+            {
+                Debug.Log(e);
+            }
         }
     }
 }

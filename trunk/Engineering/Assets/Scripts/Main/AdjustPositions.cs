@@ -22,16 +22,15 @@ public class AdjustPositions : MonoBehaviour
     {
         _start.transform.position = pole1.transform.position;
         var pos = _start.transform.position;
-        pos.y = (float)((int)pole1.renderer.bounds.size.y >> 1) - ((int)((BoxCollider)_player.collider).size.y);
+        pos.y = (float)((int)pole1.renderer.bounds.size.y >> 1) + ((int)((BoxCollider)_player.collider).size.y <<3 );
         _start.transform.position = pos;
 
         _target.transform.position = pole2.transform.position;
         pos = _target.transform.position;
         var t = ((int)((BoxCollider)_player.collider).size.y << 1);
-        pos.y = (float)((int)pole2.renderer.bounds.size.y >> 1) - ((int)((BoxCollider)_player.collider).size.y);
+        pos.y = (float)((int)pole2.renderer.bounds.size.y >> 1) + ((int)((BoxCollider)_player.collider).size.y <<3);
         pos.z = pole2.transform.position.z;
         _target.transform.position = pos;
-
         _player.transform.position
              = _start.transform.position;
     }
