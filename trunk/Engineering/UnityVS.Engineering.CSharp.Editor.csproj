@@ -124,14 +124,7 @@
     <None Include="Assets\0000 ats V2 package\atsV2 billboardShader package\TreeCreatorLeavesRendertex.shader" />
     <None Include="Assets\0000 ats V2 package\atsV2 grassShader Package\atsV2WavingGrass.shader" />
     <None Include="Assets\0000 ats V2 package\atsV2 UnityTerrainBump Package\TerrainReplacementAtsV2.shader" />
-    <None Include="Assets\0000 ats V2 package\readme_billboardShader.txt" />
-    <None Include="Assets\0000 ats V2 package\readme_grassShader.txt" />
-    <None Include="Assets\0000 ats V2 package\readme_terrainBumpShader.txt" />
-    <None Include="Assets\0000 ats V2 package\readme_treeBarkShader.txt" />
-    <None Include="Assets\0000 ats V2 package\readme_vertexLitShader.txt" />
     <None Include="Assets\DebugKey.txt" />
-    <None Include="Assets\iTween\ReadMe!\ReadMe!.txt" />
-    <None Include="Assets\JSON\readme.txt" />
     <None Include="Assets\Plugins\Android\AndroidManifest.xml" />
     <None Include="Assets\Plugins\Android\facebook\AndroidManifest.xml" />
     <None Include="Assets\Plugins\Android\facebook\bin\AndroidManifest.xml" />
@@ -196,7 +189,6 @@
     <None Include="Assets\Standard Assets\Water (Pro Only)\Water4\Sources\Shaders\FX-SimpleWater4.shader" />
     <None Include="Assets\Standard Assets\Water (Pro Only)\Water4\Sources\Shaders\FX-Water4.shader" />
     <None Include="Assets\Standard Assets\Water (Pro Only)\Water4\Sources\Shaders\WaterInclude.cginc" />
-    <None Include="Assets\UnitySerializer\readme.txt" />
     <None Include="Assets\TouchScript\Editor\TouchScript.Editor.dll" />
     <None Include="Assets\UnityVS\Editor\SyntaxTree.VisualStudio.Unity.Bridge.dll" />
     <None Include="Assets\UnityVS\Editor\SyntaxTree.VisualStudio.Unity.Messaging.dll" />
