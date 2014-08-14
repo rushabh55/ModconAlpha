@@ -1,0 +1,224 @@
+fileFormatVersion: 2
+guid: 536f6843c699c35498dcf56e770c6f92
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: marioSpprite
+    21300002: marioSpprite_0
+    21300004: marioSpprite_1
+    21300006: marioSpprite_2
+    21300008: marioSpprite_3
+    21300010: marioSpprite_4
+    21300012: marioSpprite_5
+    21300014: marioSpprite_6
+    21300016: marioSpprite_7
+    21300018: marioSpprite_8
+    21300020: marioSpprite_9
+    21300022: marioSpprite_10
+    21300024: marioSpprite_11
+    21300026: marioSpprite_12
+    21300028: marioSpprite_13
+    21300030: marioSpprite_14
+    21300032: marioSpprite_15
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 1
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 4096
+  textureSettings:
+    filterMode: 2
+    aniso: 9
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 1
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 5
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: marioSpprite_0
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 245
+        width: 22
+        height: 36
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: marioSpprite_1
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 285
+        width: 23
+        height: 35
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: marioSpprite_2
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 285
+        width: 21
+        height: 36
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: marioSpprite_3
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 285
+        width: 22
+        height: 35
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: marioSpprite_4
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 285
+        width: 25
+        height: 36
+      alignment: 9
+      pivot: {x: .37659055, y: .583482623}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: marioSpprite_5
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 285
+        width: 18
+        height: 37
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: marioSpprite_6
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 285
+        width: 19
+        height: 35
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: marioSpprite_7
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 285
+        width: 23
+        height: 35
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: marioSpprite_8
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 285
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: marioSpprite_9
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 285
+        width: 21
+        height: 35
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: marioSpprite_10
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 285
+        width: 25
+        height: 36
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: marioSpprite_11
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 245
+        width: 19
+        height: 37
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: marioSpprite_12
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 245
+        width: 21
+        height: 36
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: marioSpprite_13
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 245
+        width: 21
+        height: 35
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: marioSpprite_14
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 245
+        width: 18
+        height: 37
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: marioSpprite_15
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 246
+        width: 25
+        height: 35
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: walk
+  userData: 
