@@ -101,7 +101,7 @@ public class Settings : MonoBehaviour {
     {
         m_screenWidth = (ushort)Screen.width;
         m_screenHeight = (ushort)Screen.height;
-        m_aspectRatio = m_screenWidth / m_screenHeight;
+        m_aspectRatio = m_screenWidth / (m_screenHeight == (ushort)0 ? (ushort)1 : (ushort)m_screenHeight);
     }
 
     void Update()

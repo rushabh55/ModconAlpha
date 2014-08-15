@@ -4,6 +4,8 @@ using System.Collections;
 public class TapMouseRayCast : MonoBehaviour {
     public Camera _camera;
     public GameObject[] _objsToHide;
+    public GameObject _mainMenu;
+    public GameObject _settingsMenu;
 	// Use this for initialization
 	void Start () 
     {
@@ -34,6 +36,8 @@ public class TapMouseRayCast : MonoBehaviour {
         {
             Application.Quit();
         }
+
+
 	}
 
     void CheckForRayCollisions(Vector3 pos)
@@ -56,6 +60,11 @@ public class TapMouseRayCast : MonoBehaviour {
                 {
                     DebugPanel.AddText(e.Message, true);
                 }
+            }
+            else
+            if ( hit.collider.name == "Settings")
+            {
+                _camera.transform.LookAt(_settingsMenu.transform);
             }
         }
     }
