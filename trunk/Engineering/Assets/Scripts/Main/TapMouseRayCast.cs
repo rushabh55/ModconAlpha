@@ -1,15 +1,37 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class TapMouseRayCast : MonoBehaviour {
+public class TapMouseRayCast : MonoBehaviour 
+{
     public Camera _camera;
     public GameObject[] _objsToHide;
     public GameObject _mainMenu;
     public GameObject _settingsMenu;
+
+    public int m_animSpeed;
+    public enum UIState
+    {
+        MAINMENU = 1,
+        OPTIONS = 2,
+        LEVELSELECT = 3
+    };
+
+    public enum AnimState
+    {
+        NO_ANIM = 0,
+        MAINMENU_TO_OPTIONS = 1,
+        OPTIONS_TO_MAINMENU = 2,
+        NUM_STATES
+    }
+
+    public AnimState m_currAnimState;
+    public UIState m_currentState;
+
 	// Use this for initialization
 	void Start () 
     {
         Application.targetFrameRate = 3000;
+        m_currentState = UIState.MAINMENU;
 	}
 	
 	// Update is called once per frame
@@ -24,21 +46,58 @@ public class TapMouseRayCast : MonoBehaviour {
         {
             CheckForRayCollisions(Input.mousePosition);
         }
-        else
-        {
-            foreach (var t in _objsToHide)
-            {
-                t.renderer.material.color = Color.black;
-            }
-        }
-
         if ( Input.GetKey(KeyCode.Backspace ) || Input.GetKey(KeyCode.Escape) )
         {
             Application.Quit();
-        }
-
-
+        }       
 	}
+
+    void FixedUpdate()
+    {
+        if (m_currAnimState == AnimState.NO_ANIM || m_currAnimState == AnimState.NUM_STATES)
+            return;
+
+        if (m_currAnimState == AnimState.MAINMENU_TO_OPTIONS)
+        {
+            Vector3 newPosition = new Vector3(
+                                            _settingsMenu.transform.position.x, 
+                                            _camera.transform.position.y, 
+                                            _camera.transform.position.z);
+
+            _camera.transform.position = Vector3.MoveTowards(
+                                           _camera.transform.position,
+                                           newPosition,
+                                           Time.deltaTime * m_animSpeed
+                                           );
+
+            Debug.Log(Vector3.Distance(newPosition, _camera.transform.position));
+            if ( Vector3.Distance ( newPosition, _camera.transform.position ) < 1 )
+            {
+                m_currAnimState = AnimState.NO_ANIM;
+                _camera.transform.position = newPosition;
+            }
+        }
+        else
+        if ( m_currAnimState == AnimState.OPTIONS_TO_MAINMENU )
+        {
+            Vector3 newPosition = new Vector3(
+                                            _mainMenu.transform.position.x,
+                                            _camera.transform.position.y,
+                                            _camera.transform.position.z);
+
+            _camera.transform.position = Vector3.MoveTowards(
+                                           _camera.transform.position,
+                                           newPosition,
+                                           Time.deltaTime * m_animSpeed
+                                           );
+
+            if (Vector3.Distance(newPosition, _camera.transform.position) < 1)
+            {
+                m_currAnimState = AnimState.NO_ANIM;
+                _camera.transform.position = newPosition;
+            }
+        }
+    }
 
     void CheckForRayCollisions(Vector3 pos)
     {
@@ -47,24 +106,33 @@ public class TapMouseRayCast : MonoBehaviour {
         Debug.DrawLine(ray.origin,ray.direction, Color.green);
         if( Physics.Raycast(ray, out hit, 200 ))
         {
-            if( hit.collider.name == "Play")
+            if (m_currentState == UIState.MAINMENU)
             {
-                try
+                if ( hit.collider.name == "Play" )
                 {
-                    Debug.Log(hit.collider.name);
-                    hit.collider.renderer.material.color = Color.green;
-                    Application.LoadLevel(1);
-                    DebugPanel.AddText("loaded", true);
+                    try
+                    {
+                        hit.collider.renderer.material.color = Color.green;
+                        Application.LoadLevel(1);
+                    }
+                    catch (System.Exception e)
+                    {
+                        DebugPanel.AddText(e.Message, true);
+                    }
                 }
-                catch(System.Exception e)
+                else
+                if ( hit.collider.name == "Options" )
                 {
-                    DebugPanel.AddText(e.Message, true);
+                    changeState(UIState.OPTIONS);
                 }
             }
             else
-            if ( hit.collider.name == "Settings")
+            if ( m_currentState == UIState.OPTIONS )
             {
-                _camera.transform.LookAt(_settingsMenu.transform);
+                if ( hit.collider.name == "Back" )
+                {
+                    changeState(UIState.MAINMENU);
+                }
             }
         }
     }
@@ -80,6 +148,21 @@ public class TapMouseRayCast : MonoBehaviour {
         {
             FB.Init(onInitComplete, onHideunity);
             DebugPanel.AddText("Init FB", true);
+        }
+    }
+
+    private void changeState(UIState state) 
+    {
+        if (m_currentState == UIState.MAINMENU && state == UIState.OPTIONS)
+        {
+            m_currAnimState = AnimState.MAINMENU_TO_OPTIONS;
+            m_currentState = UIState.OPTIONS;
+        }
+        else
+        if ( m_currentState == UIState.OPTIONS && state == UIState.MAINMENU )
+        {
+            m_currAnimState = AnimState.OPTIONS_TO_MAINMENU;
+            m_currentState = UIState.MAINMENU;
         }
     }
 
