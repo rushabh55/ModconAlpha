@@ -150,6 +150,45 @@
  <Reference Include="IFacebook">
  <HintPath>C:/Users/Rushabh/Documents/ModconAlphaMain/trunk/Engineering/Assets/Facebook/Scripts/IFacebook.dll</HintPath>
  </Reference>
+ <Reference Include="PlayMaker">
+ <HintPath>C:/Users/Rushabh/Documents/ModconAlphaMain/trunk/Engineering/Assets/PlayMaker/PlayMaker.dll</HintPath>
+ </Reference>
+ <Reference Include="PlayMakerEditor">
+ <HintPath>C:/Users/Rushabh/Documents/ModconAlphaMain/trunk/Engineering/Assets/PlayMaker/Editor/PlayMakerEditor.dll</HintPath>
+ </Reference>
+ <Reference Include="PlayMakerEditorResources">
+ <HintPath>C:/Users/Rushabh/Documents/ModconAlphaMain/trunk/Engineering/Assets/PlayMaker/Editor/PlayMakerEditorResources.dll</HintPath>
+ </Reference>
+ <Reference Include="PlayMakerEditor.de.resources">
+ <HintPath>C:/Users/Rushabh/Documents/ModconAlphaMain/trunk/Engineering/Assets/PlayMaker/Editor/de/PlayMakerEditor.de.resources.dll</HintPath>
+ </Reference>
+ <Reference Include="PlayMakerEditor.es-ES.resources">
+ <HintPath>C:/Users/Rushabh/Documents/ModconAlphaMain/trunk/Engineering/Assets/PlayMaker/Editor/es-ES/PlayMakerEditor.es-ES.resources.dll</HintPath>
+ </Reference>
+ <Reference Include="PlayMakerEditor.fr.resources">
+ <HintPath>C:/Users/Rushabh/Documents/ModconAlphaMain/trunk/Engineering/Assets/PlayMaker/Editor/fr/PlayMakerEditor.fr.resources.dll</HintPath>
+ </Reference>
+ <Reference Include="PlayMakerEditor.it.resources">
+ <HintPath>C:/Users/Rushabh/Documents/ModconAlphaMain/trunk/Engineering/Assets/PlayMaker/Editor/it/PlayMakerEditor.it.resources.dll</HintPath>
+ </Reference>
+ <Reference Include="PlayMakerEditor.ja.resources">
+ <HintPath>C:/Users/Rushabh/Documents/ModconAlphaMain/trunk/Engineering/Assets/PlayMaker/Editor/ja/PlayMakerEditor.ja.resources.dll</HintPath>
+ </Reference>
+ <Reference Include="PlayMakerEditor.nl.resources">
+ <HintPath>C:/Users/Rushabh/Documents/ModconAlphaMain/trunk/Engineering/Assets/PlayMaker/Editor/nl/PlayMakerEditor.nl.resources.dll</HintPath>
+ </Reference>
+ <Reference Include="PlayMakerEditor.pt-BR.resources">
+ <HintPath>C:/Users/Rushabh/Documents/ModconAlphaMain/trunk/Engineering/Assets/PlayMaker/Editor/pt-BR/PlayMakerEditor.pt-BR.resources.dll</HintPath>
+ </Reference>
+ <Reference Include="PlayMakerEditor.sv-SE.resources">
+ <HintPath>C:/Users/Rushabh/Documents/ModconAlphaMain/trunk/Engineering/Assets/PlayMaker/Editor/sv-SE/PlayMakerEditor.sv-SE.resources.dll</HintPath>
+ </Reference>
+ <Reference Include="PlayMakerEditor.zh-CN.resources">
+ <HintPath>C:/Users/Rushabh/Documents/ModconAlphaMain/trunk/Engineering/Assets/PlayMaker/Editor/zh-CN/PlayMakerEditor.zh-CN.resources.dll</HintPath>
+ </Reference>
+ <Reference Include="PlayMakerEditor.zh-TW.resources">
+ <HintPath>C:/Users/Rushabh/Documents/ModconAlphaMain/trunk/Engineering/Assets/PlayMaker/Editor/zh-TW/PlayMakerEditor.zh-TW.resources.dll</HintPath>
+ </Reference>
  <Reference Include="TouchScript.Editor">
  <HintPath>C:/Users/Rushabh/Documents/ModconAlphaMain/trunk/Engineering/Assets/TouchScript/Editor/TouchScript.Editor.dll</HintPath>
  </Reference>
@@ -167,45 +206,6 @@
  </Reference>
  <Reference Include="UnityEditor.Graphs">
  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEditor.Graphs.dll</HintPath>
- </Reference>
- <Reference Include="PlayMakerEditor.nl.resources">
- <HintPath>C:/Users/Rushabh/Documents/ModconAlphaMain/trunk/Engineering/Assets/PlayMaker/Editor/nl/PlayMakerEditor.nl.resources.dll</HintPath>
- </Reference>
- <Reference Include="PlayMakerEditor.es-ES.resources">
- <HintPath>C:/Users/Rushabh/Documents/ModconAlphaMain/trunk/Engineering/Assets/PlayMaker/Editor/es-ES/PlayMakerEditor.es-ES.resources.dll</HintPath>
- </Reference>
- <Reference Include="PlayMakerEditor.sv-SE.resources">
- <HintPath>C:/Users/Rushabh/Documents/ModconAlphaMain/trunk/Engineering/Assets/PlayMaker/Editor/sv-SE/PlayMakerEditor.sv-SE.resources.dll</HintPath>
- </Reference>
- <Reference Include="PlayMakerEditor.ja.resources">
- <HintPath>C:/Users/Rushabh/Documents/ModconAlphaMain/trunk/Engineering/Assets/PlayMaker/Editor/ja/PlayMakerEditor.ja.resources.dll</HintPath>
- </Reference>
- <Reference Include="PlayMakerEditor.de.resources">
- <HintPath>C:/Users/Rushabh/Documents/ModconAlphaMain/trunk/Engineering/Assets/PlayMaker/Editor/de/PlayMakerEditor.de.resources.dll</HintPath>
- </Reference>
- <Reference Include="PlayMakerEditor.fr.resources">
- <HintPath>C:/Users/Rushabh/Documents/ModconAlphaMain/trunk/Engineering/Assets/PlayMaker/Editor/fr/PlayMakerEditor.fr.resources.dll</HintPath>
- </Reference>
- <Reference Include="PlayMaker">
- <HintPath>C:/Users/Rushabh/Documents/ModconAlphaMain/trunk/Engineering/Assets/PlayMaker/PlayMaker.dll</HintPath>
- </Reference>
- <Reference Include="PlayMakerEditor.zh-TW.resources">
- <HintPath>C:/Users/Rushabh/Documents/ModconAlphaMain/trunk/Engineering/Assets/PlayMaker/Editor/zh-TW/PlayMakerEditor.zh-TW.resources.dll</HintPath>
- </Reference>
- <Reference Include="PlayMakerEditor">
- <HintPath>C:/Users/Rushabh/Documents/ModconAlphaMain/trunk/Engineering/Assets/PlayMaker/Editor/PlayMakerEditor.dll</HintPath>
- </Reference>
- <Reference Include="PlayMakerEditor.zh-CN.resources">
- <HintPath>C:/Users/Rushabh/Documents/ModconAlphaMain/trunk/Engineering/Assets/PlayMaker/Editor/zh-CN/PlayMakerEditor.zh-CN.resources.dll</HintPath>
- </Reference>
- <Reference Include="PlayMakerEditorResources">
- <HintPath>C:/Users/Rushabh/Documents/ModconAlphaMain/trunk/Engineering/Assets/PlayMaker/Editor/PlayMakerEditorResources.dll</HintPath>
- </Reference>
- <Reference Include="PlayMakerEditor.it.resources">
- <HintPath>C:/Users/Rushabh/Documents/ModconAlphaMain/trunk/Engineering/Assets/PlayMaker/Editor/it/PlayMakerEditor.it.resources.dll</HintPath>
- </Reference>
- <Reference Include="PlayMakerEditor.pt-BR.resources">
- <HintPath>C:/Users/Rushabh/Documents/ModconAlphaMain/trunk/Engineering/Assets/PlayMaker/Editor/pt-BR/PlayMakerEditor.pt-BR.resources.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>

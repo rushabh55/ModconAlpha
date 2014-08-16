@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
+using Assets.Scripts.Base;
 
-public class SimplePlayerTranslate : MonoBehaviour 
+public class SimplePlayerTranslate : MonoBehaviour , ILevelObject
 {
     public GameObject _player;
     public GameObject start;
@@ -9,6 +10,7 @@ public class SimplePlayerTranslate : MonoBehaviour
     static int SPEED = 20;
     public Camera camera;
     public ParticleSystem _explosionParticleSystem;
+    public AdjustPositions m_sAdjustPositions;
     public enum InputType
     {
         Mouse,
@@ -19,6 +21,21 @@ public class SimplePlayerTranslate : MonoBehaviour
 
     public InputType _inputType;
     public GUITexture crossHair;
+
+    public void InitializePosition()
+    {
+        m_sAdjustPositions.Reposition();
+        _player.collider.renderer.active = true;
+    }
+
+    public void Explode()
+    {
+        _explosionParticleSystem.Emit(250);
+    }
+    public void LevelEnd()
+    {
+
+    }
     
 	// Update is called once per frame
 	void Update () 
@@ -52,7 +69,7 @@ public class SimplePlayerTranslate : MonoBehaviour
         {
             if (hit.collider.name == "Worker")
             {
-                _explosionParticleSystem.Emit(250);
+                Explode();
             }
         }
     }

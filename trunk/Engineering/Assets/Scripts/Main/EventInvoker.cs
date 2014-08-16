@@ -4,6 +4,7 @@ using System.Collections;
 public class EventInvoker : MonoBehaviour {
     public GameObject player;
     public GameObject globals;
+    public SimplePlayerTranslate m_sPlayerTranslate;
 	// Use this for initialization
 	void Start () 
     {
@@ -29,8 +30,7 @@ public class EventInvoker : MonoBehaviour {
         {
             foreach (var t in player.GetComponentsInChildren<Renderer>())
             {
-                var adjPos = globals.GetComponent<AdjustPositions>();
-                adjPos.Reposition();
+                m_sPlayerTranslate.InitializePosition();
             }
         }
     }

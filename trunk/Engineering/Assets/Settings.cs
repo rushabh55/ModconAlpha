@@ -4,6 +4,7 @@ using System;
 
 #if UNITY_ANDROID || UNITY_WP8 || UNITY_STANDALONE_WIN
 public class Settings : MonoBehaviour {
+    public Texture2D m_mouseTexture;
 
     static public UInt16 SCREENWIDTH
     {
@@ -95,7 +96,10 @@ public class Settings : MonoBehaviour {
     {
     }
     
-
+    void OnGUI()
+    {
+        Cursor.SetCursor(m_mouseTexture, Vector2.zero, CursorMode.Auto);
+    }
 
 
 

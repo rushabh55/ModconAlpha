@@ -197,11 +197,11 @@
  <Reference Include="IFacebook">
  <HintPath>C:/Users/Rushabh/Documents/ModconAlphaMain/trunk/Engineering/Assets/Facebook/Scripts/IFacebook.dll</HintPath>
  </Reference>
- <Reference Include="TouchScript">
- <HintPath>C:/Users/Rushabh/Documents/ModconAlphaMain/trunk/Engineering/Assets/TouchScript/Plugins/TouchScript.dll</HintPath>
- </Reference>
  <Reference Include="PlayMaker">
  <HintPath>C:/Users/Rushabh/Documents/ModconAlphaMain/trunk/Engineering/Assets/PlayMaker/PlayMaker.dll</HintPath>
+ </Reference>
+ <Reference Include="TouchScript">
+ <HintPath>C:/Users/Rushabh/Documents/ModconAlphaMain/trunk/Engineering/Assets/TouchScript/Plugins/TouchScript.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>
