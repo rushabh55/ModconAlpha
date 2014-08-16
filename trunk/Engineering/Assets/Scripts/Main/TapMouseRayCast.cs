@@ -26,12 +26,15 @@ public class TapMouseRayCast : MonoBehaviour
 
     public AnimState m_currAnimState;
     public UIState m_currentState;
+    public Texture2D _mouseTexture;
 
 	// Use this for initialization
 	void Start () 
     {
         Application.targetFrameRate = 3000;
         m_currentState = UIState.MAINMENU;
+
+        Debug.Log(Application.loadedLevelName);
 	}
 	
 	// Update is called once per frame
@@ -70,7 +73,6 @@ public class TapMouseRayCast : MonoBehaviour
                                            Time.deltaTime * m_animSpeed
                                            );
 
-            Debug.Log(Vector3.Distance(newPosition, _camera.transform.position));
             if ( Vector3.Distance ( newPosition, _camera.transform.position ) < 1 )
             {
                 m_currAnimState = AnimState.NO_ANIM;
@@ -113,7 +115,7 @@ public class TapMouseRayCast : MonoBehaviour
                     try
                     {
                         hit.collider.renderer.material.color = Color.green;
-                        Application.LoadLevel(1);
+                        Application.LoadLevel("Level");
                     }
                     catch (System.Exception e)
                     {
@@ -123,7 +125,15 @@ public class TapMouseRayCast : MonoBehaviour
                 else
                 if ( hit.collider.name == "Options" )
                 {
-                    changeState(UIState.OPTIONS);
+                    try
+                    {
+                        hit.collider.renderer.material.color = Color.green;
+                        changeState(UIState.OPTIONS);
+                    }
+                    catch (System.Exception e)
+                    {
+                        DebugPanel.AddText(e.Message, true);
+                    }
                 }
             }
             else
@@ -131,7 +141,15 @@ public class TapMouseRayCast : MonoBehaviour
             {
                 if ( hit.collider.name == "Back" )
                 {
-                    changeState(UIState.MAINMENU);
+                    try
+                    {
+                        hit.collider.renderer.material.color = Color.green;
+                        changeState(UIState.MAINMENU);
+                    }
+                    catch (System.Exception e)
+                    {
+                        DebugPanel.AddText(e.Message, true);
+                    }
                 }
             }
         }
@@ -139,9 +157,10 @@ public class TapMouseRayCast : MonoBehaviour
 
     void OnGUI()
     {
+        Cursor.SetCursor(_mouseTexture, Vector2.zero, CursorMode.Auto);
         if ( GUI.Button ( new Rect (400, 100, 400, 100), "Load Level"))
         {
-            Application.LoadLevel(1);
+            Application.LoadLevel("Level");
         }
 
         if (GUI.Button (new Rect (Screen.width - 250, Screen.height - 80, 250, 80), "Facebook Login"))

@@ -2,8 +2,7 @@
 using System.Collections;
 using System;
 
-#if UNITY_ANDROID
-#endif
+#if UNITY_ANDROID || UNITY_WP8 || UNITY_STANDALONE_WIN
 public class Settings : MonoBehaviour {
 
     static public UInt16 SCREENWIDTH
@@ -49,8 +48,11 @@ public class Settings : MonoBehaviour {
     private static UInt16 m_screenWidth;
     private static UInt16 m_screenHeight;
     private static double m_aspectRatio;
+
+
     void Awake()
     {
+        //DEDUPE. GET STORAGE PATHS? 
     }
     
     // This function is called every fixed framerate frame, if the MonoBehaviour is enabled (Since v1.0)
@@ -114,3 +116,5 @@ public class Settings : MonoBehaviour {
     }
 }
 
+
+#endif

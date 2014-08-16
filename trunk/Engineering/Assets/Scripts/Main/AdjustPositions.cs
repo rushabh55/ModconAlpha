@@ -11,6 +11,7 @@ public class AdjustPositions : MonoBehaviour
     {
         Reposition();
         Application.targetFrameRate = 10000;
+
 	}
 
     void Awake()
