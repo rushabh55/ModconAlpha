@@ -2,6 +2,7 @@
 using System.Collections;
 
 public class EventInvoker : MonoBehaviour {
+
     public GameObject player;
     public GameObject globals;
     public SimplePlayerTranslate m_sPlayerTranslate;

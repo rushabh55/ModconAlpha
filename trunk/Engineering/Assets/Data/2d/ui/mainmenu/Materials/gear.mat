@@ -7,7 +7,7 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: gear
-  m_Shader: {fileID: 4800000, guid: c494c890ec8664fd9aa7d66ebfa1a7e6, type: 3}
+  m_Shader: {fileID: 4800000, guid: e1f50dc041f1545edbb228f8daea22a1, type: 3}
   m_ShaderKeywords: []
   m_CustomRenderQueue: -1
   m_SavedProperties:
@@ -20,5 +20,21 @@ Material:
           m_Texture: {fileID: 2800000, guid: dcebecf55f3923740b48cdbe56e04ab7, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
-    m_Floats: {}
-    m_Colors: {}
+    m_Floats:
+      data:
+        first:
+          name: _Shininess
+        second: 1
+    m_Colors:
+      data:
+        first:
+          name: _Color
+        second: {r: .470588207, g: .470588207, b: .470588207, a: 1}
+      data:
+        first:
+          name: _SpecColor
+        second: {r: 0, g: 0, b: 0, a: 1}
+      data:
+        first:
+          name: _Emission
+        second: {r: 0, g: 0, b: 0, a: 0}

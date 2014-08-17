@@ -227,6 +227,7 @@ public class JSONObject {
 		Parse(str, maxDepth, storeExcessLevels, strict);
 	}
 	void Parse(string str, int maxDepth = -2, bool storeExcessLevels = false, bool strict = false) {
+#if !UNITY_WP8
 		if(!string.IsNullOrEmpty(str)) {
 			str = str.Trim(WHITESPACE);
 			if(strict) {
@@ -359,9 +360,11 @@ public class JSONObject {
 					}
 				}
 			} else type = Type.NULL;
+
 		} else type = Type.NULL;	//If the string is missing, this is a null
-		//Profiler.EndSample();
-	}
+        //Profiler.EndSample();
+#endif
+    }
 	#endregion
 	public bool IsNumber { get { return type == Type.NUMBER; } }
 	public bool IsNull { get { return type == Type.NULL; } }

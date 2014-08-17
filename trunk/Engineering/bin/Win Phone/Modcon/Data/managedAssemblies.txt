@@ -3,3 +3,6 @@ Assembly-CSharp.dll
 Assembly-UnityScript-firstpass.dll
 Assembly-UnityScript.dll
 Boo.Lang.dll
+IFacebook.dll
+PlayMaker.dll
+TouchScript.dll

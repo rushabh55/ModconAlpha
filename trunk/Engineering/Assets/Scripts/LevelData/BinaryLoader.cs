@@ -3,7 +3,7 @@ using System.Collections;
 using System.Xml.Serialization;
 using MAIN_SETTINGS;
 public class BinaryLoader : MonoBehaviour {
-    private string m_pathPrefix = Settings.PERSISTENTDATAPATH + "/level";
+    //private string m_pathPrefix = Settings.PERSISTENTDATAPATH + "/level";
     private int m_levelNo = 1;
     public GameObject[] m_levelPrefabs;
 

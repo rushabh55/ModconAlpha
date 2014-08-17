@@ -1,12 +1,19 @@
 ﻿using UnityEngine;
 using System.Collections;
 using Assets.Scripts.Base;
+using MAIN_SETTINGS;
 
 public class SimplePlayerTranslate : MonoBehaviour , ILevelObject
 {
     public GameObject _player;
+    public GameObject _player2;
+
     public GameObject start;
     public GameObject end;
+
+    public GameObject start2;
+    public GameObject end2;
+
     static int SPEED = 20;
     public Camera camera;
     public ParticleSystem _explosionParticleSystem;
@@ -40,7 +47,14 @@ public class SimplePlayerTranslate : MonoBehaviour , ILevelObject
 	// Update is called once per frame
 	void Update () 
     {
-        _player.transform.position = Vector3.MoveTowards(_player.transform.position, end.transform.position, Time.deltaTime * SPEED);        
+        _player.transform.position = Vector3.MoveTowards(_player.transform.position, end.transform.position, Time.deltaTime * Settings.m_currentLevelSpeed);        
+        if ( AdjustPositions.isDoubleEnabled )
+        {
+            if ( _player2 != null )
+            {
+                _player2.transform.position = Vector3.MoveTowards(_player2.transform.position, end2.transform.position, Time.deltaTime * Settings.m_currentLevelSpeed );
+            }
+        }
 	}
 
     void FixedUpdate()
@@ -67,7 +81,7 @@ public class SimplePlayerTranslate : MonoBehaviour , ILevelObject
         RaycastHit hit = new RaycastHit();
         if ( Physics.Raycast(ray, out hit) )
         {
-            if (hit.collider.name == "Worker")
+            if (hit.collider.name == "Player")
             {
                 Explode();
             }

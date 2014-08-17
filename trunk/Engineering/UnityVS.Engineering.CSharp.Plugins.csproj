@@ -22,7 +22,7 @@
     <OutputPath>Temp\UnityVS_bin\Debug\</OutputPath>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DefineConstants>DEBUG;TRACE;UNITY_4_5_2;UNITY_4_5;UNITY_ANDROID;ENABLE_MICROPHONE;ENABLE_TEXTUREID_MAP;ENABLE_UNITYEVENTS;ENABLE_NEW_HIERARCHY ;ENABLE_AUDIO_FMOD;ENABLE_MONO;ENABLE_TERRAIN;ENABLE_SUBSTANCE;ENABLE_GENERICS;INCLUDE_WP8SUPPORT;ENABLE_WWW;ENABLE_IMAGEEFFECTS;ENABLE_WEBCAM;INCLUDE_METROSUPPORT;RENDER_SOFTWARE_CURSOR;ENABLE_NETWORK;ENABLE_PHYSICS;ENABLE_CACHING;ENABLE_CLOTH;UNITY_ANDROID_API;ENABLE_2D_PHYSICS;ENABLE_SHADOWS;ENABLE_AUDIO;ENABLE_NAVMESH_CARVING;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;DEVELOPMENT_BUILD;ENABLE_PROFILER;UNITY_EDITOR;UNITY_EDITOR_WIN</DefineConstants>
+    <DefineConstants>DEBUG;TRACE;UNITY_4_5_2;UNITY_4_5;UNITY_WP8;ENABLE_MICROPHONE;ENABLE_TEXTUREID_MAP;ENABLE_UNITYEVENTS;ENABLE_NEW_HIERARCHY ;ENABLE_LAZY_METHOD_CACHING;ENABLE_AUDIO_FMOD;ENABLE_TERRAIN;ENABLE_GENERICS;INCLUDE_WP8SUPPORT;ENABLE_MOVIES;ENABLE_WWW;ENABLE_IMAGEEFFECTS;UNITY_WINRT;ENABLE_WEBCAM;INCLUDE_METROSUPPORT;RENDER_SOFTWARE_CURSOR;ENABLE_PHYSICS;ENABLE_CACHING;ENABLE_SERIALIZATION_BY_CODEGENERATION;ENABLE_CLOTH;ENABLE_2D_PHYSICS;ENABLE_SHADOWS;ENABLE_AUDIO;ENABLE_NAVMESH_CARVING;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;DEVELOPMENT_BUILD;ENABLE_PROFILER;UNITY_EDITOR;UNITY_EDITOR_WIN</DefineConstants>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -30,7 +30,7 @@
     <OutputPath>Temp\UnityVS_bin\Release\</OutputPath>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DefineConstants>TRACE;UNITY_4_5_2;UNITY_4_5;UNITY_ANDROID;ENABLE_MICROPHONE;ENABLE_TEXTUREID_MAP;ENABLE_UNITYEVENTS;ENABLE_NEW_HIERARCHY ;ENABLE_AUDIO_FMOD;ENABLE_MONO;ENABLE_TERRAIN;ENABLE_SUBSTANCE;ENABLE_GENERICS;INCLUDE_WP8SUPPORT;ENABLE_WWW;ENABLE_IMAGEEFFECTS;ENABLE_WEBCAM;INCLUDE_METROSUPPORT;RENDER_SOFTWARE_CURSOR;ENABLE_NETWORK;ENABLE_PHYSICS;ENABLE_CACHING;ENABLE_CLOTH;UNITY_ANDROID_API;ENABLE_2D_PHYSICS;ENABLE_SHADOWS;ENABLE_AUDIO;ENABLE_NAVMESH_CARVING;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;DEVELOPMENT_BUILD;ENABLE_PROFILER;UNITY_EDITOR;UNITY_EDITOR_WIN</DefineConstants>
+    <DefineConstants>TRACE;UNITY_4_5_2;UNITY_4_5;UNITY_WP8;ENABLE_MICROPHONE;ENABLE_TEXTUREID_MAP;ENABLE_UNITYEVENTS;ENABLE_NEW_HIERARCHY ;ENABLE_LAZY_METHOD_CACHING;ENABLE_AUDIO_FMOD;ENABLE_TERRAIN;ENABLE_GENERICS;INCLUDE_WP8SUPPORT;ENABLE_MOVIES;ENABLE_WWW;ENABLE_IMAGEEFFECTS;UNITY_WINRT;ENABLE_WEBCAM;INCLUDE_METROSUPPORT;RENDER_SOFTWARE_CURSOR;ENABLE_PHYSICS;ENABLE_CACHING;ENABLE_SERIALIZATION_BY_CODEGENERATION;ENABLE_CLOTH;ENABLE_2D_PHYSICS;ENABLE_SHADOWS;ENABLE_AUDIO;ENABLE_NAVMESH_CARVING;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;DEVELOPMENT_BUILD;ENABLE_PROFILER;UNITY_EDITOR;UNITY_EDITOR_WIN</DefineConstants>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="mscorlib" />
@@ -57,96 +57,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Plugins\whydoidoit.com\ClickMeAndDie.cs" />
-    <Compile Include="Assets\Plugins\whydoidoit.com\LitJson\IJsonWrapper.cs" />
-    <Compile Include="Assets\Plugins\whydoidoit.com\LitJson\JsonData.cs" />
-    <Compile Include="Assets\Plugins\whydoidoit.com\LitJson\JsonException.cs" />
-    <Compile Include="Assets\Plugins\whydoidoit.com\LitJson\JsonMapper.cs" />
-    <Compile Include="Assets\Plugins\whydoidoit.com\LitJson\JsonReader.cs" />
-    <Compile Include="Assets\Plugins\whydoidoit.com\LitJson\JsonWriter.cs" />
-    <Compile Include="Assets\Plugins\whydoidoit.com\LitJson\Lexer.cs" />
-    <Compile Include="Assets\Plugins\whydoidoit.com\LitJson\ParserToken.cs" />
-    <Compile Include="Assets\Plugins\whydoidoit.com\Radical\RPCEnabler.cs" />
-    <Compile Include="Assets\Plugins\whydoidoit.com\Radical\System\Broadcaster.cs" />
-    <Compile Include="Assets\Plugins\whydoidoit.com\Radical\System\Curves.cs" />
-    <Compile Include="Assets\Plugins\whydoidoit.com\Radical\System\Delegates\DelegateSupport.cs" />
-    <Compile Include="Assets\Plugins\whydoidoit.com\Radical\System\Easing.cs" />
-    <Compile Include="Assets\Plugins\whydoidoit.com\Radical\System\InheritableRPC.cs" />
-    <Compile Include="Assets\Plugins\whydoidoit.com\Radical\System\LoadAnimations.cs" />
-    <Compile Include="Assets\Plugins\whydoidoit.com\Radical\System\Loom.cs" />
-    <Compile Include="Assets\Plugins\whydoidoit.com\Radical\System\MonoBehaviourEx.cs" />
-    <Compile Include="Assets\Plugins\whydoidoit.com\Radical\System\Radical.cs" />
-    <Compile Include="Assets\Plugins\whydoidoit.com\Radical\System\RadicalRoutine.cs" />
-    <Compile Include="Assets\Plugins\whydoidoit.com\Radical\System\RadicalRoutineHelper.cs" />
-    <Compile Include="Assets\Plugins\whydoidoit.com\Radical\System\Smoothing.cs" />
-    <Compile Include="Assets\Plugins\whydoidoit.com\Radical\System\Testing\Inherited.cs" />
-    <Compile Include="Assets\Plugins\whydoidoit.com\Radical\System\Testing\SimpleCaller.cs" />
-    <Compile Include="Assets\Plugins\whydoidoit.com\Radical\System\TransformExtensions.cs" />
-    <Compile Include="Assets\Plugins\whydoidoit.com\Radical\System\XmlSupport.cs" />
-    <Compile Include="Assets\Plugins\whydoidoit.com\ResultLogger.cs" />
-    <Compile Include="Assets\Plugins\whydoidoit.com\Serialization\EmptyObjectIdentifier.cs" />
-    <Compile Include="Assets\Plugins\whydoidoit.com\Serialization\Entry.cs" />
-    <Compile Include="Assets\Plugins\whydoidoit.com\Serialization\GetSet.cs" />
-    <Compile Include="Assets\Plugins\whydoidoit.com\Serialization\GetSetGeneric.cs" />
-    <Compile Include="Assets\Plugins\whydoidoit.com\Serialization\GetWritableAttributes.cs" />
-    <Compile Include="Assets\Plugins\whydoidoit.com\Serialization\IStorage.cs" />
-    <Compile Include="Assets\Plugins\whydoidoit.com\Serialization\InRangeItem.cs" />
-    <Compile Include="Assets\Plugins\whydoidoit.com\Serialization\JSONLevelLoader.cs" />
-    <Compile Include="Assets\Plugins\whydoidoit.com\Serialization\JSONLevelSerializer.cs" />
-    <Compile Include="Assets\Plugins\whydoidoit.com\Serialization\JSONSerializer.cs" />
-    <Compile Include="Assets\Plugins\whydoidoit.com\Serialization\LevelLoader.cs" />
-    <Compile Include="Assets\Plugins\whydoidoit.com\Serialization\LevelSerializer.cs" />
-    <Compile Include="Assets\Plugins\whydoidoit.com\Serialization\OnlyInRangeManager.cs" />
-    <Compile Include="Assets\Plugins\whydoidoit.com\Serialization\PrefabIdentifier.cs" />
-    <Compile Include="Assets\Plugins\whydoidoit.com\Serialization\RemoveEditors.cs" />
-    <Compile Include="Assets\Plugins\whydoidoit.com\Serialization\Rooms\DontStoreObjectInRoom.cs" />
-    <Compile Include="Assets\Plugins\whydoidoit.com\Serialization\Rooms\Examples\PlayerLocator.cs" />
-    <Compile Include="Assets\Plugins\whydoidoit.com\Serialization\Rooms\Examples\PlayerSpawnPoint.cs" />
-    <Compile Include="Assets\Plugins\whydoidoit.com\Serialization\Rooms\PreserveObjectWhenLoading.cs" />
-    <Compile Include="Assets\Plugins\whydoidoit.com\Serialization\Rooms\Room.cs" />
-    <Compile Include="Assets\Plugins\whydoidoit.com\Serialization\Rooms\RoomDataSaveGameStorage.cs" />
-    <Compile Include="Assets\Plugins\whydoidoit.com\Serialization\Rooms\RoomLoader.cs" />
-    <Compile Include="Assets\Plugins\whydoidoit.com\Serialization\Rooms\RoomManager.cs" />
-    <Compile Include="Assets\Plugins\whydoidoit.com\Serialization\SaveGameManager.cs" />
-    <Compile Include="Assets\Plugins\whydoidoit.com\Serialization\SerializationUnits.cs" />
-    <Compile Include="Assets\Plugins\whydoidoit.com\Serialization\Storage.cs" />
-    <Compile Include="Assets\Plugins\whydoidoit.com\Serialization\StoreInformation.cs" />
-    <Compile Include="Assets\Plugins\whydoidoit.com\Serialization\StoreMaterials.cs" />
-    <Compile Include="Assets\Plugins\whydoidoit.com\Serialization\StoreMesh.cs" />
-    <Compile Include="Assets\Plugins\whydoidoit.com\Serialization\StoredReferences.cs" />
-    <Compile Include="Assets\Plugins\whydoidoit.com\Serialization\TimeSpecialist.cs" />
-    <Compile Include="Assets\Plugins\whydoidoit.com\Serialization\UniqueIdentifier.cs" />
-    <Compile Include="Assets\Plugins\whydoidoit.com\Serialization\UnitySerializationExtensions.cs" />
-    <Compile Include="Assets\Plugins\whydoidoit.com\Serialization\UnitySerializer.cs" />
-    <Compile Include="Assets\Plugins\whydoidoit.com\Serialization\prewarm.cs" />
-    <Compile Include="Assets\Plugins\whydoidoit.com\SevenZipHelper.cs" />
-    <Compile Include="Assets\Plugins\whydoidoit.com\SharpZIP\src\Checksums\Adler32.cs" />
-    <Compile Include="Assets\Plugins\whydoidoit.com\SharpZIP\src\Checksums\CRC32.cs" />
-    <Compile Include="Assets\Plugins\whydoidoit.com\SharpZIP\src\Checksums\IChecksum.cs" />
-    <Compile Include="Assets\Plugins\whydoidoit.com\SharpZIP\src\Checksums\StrangeCRC.cs" />
-    <Compile Include="Assets\Plugins\whydoidoit.com\SharpZIP\src\Compression\Deflater.cs" />
-    <Compile Include="Assets\Plugins\whydoidoit.com\SharpZIP\src\Compression\DeflaterConstants.cs" />
-    <Compile Include="Assets\Plugins\whydoidoit.com\SharpZIP\src\Compression\DeflaterEngine.cs" />
-    <Compile Include="Assets\Plugins\whydoidoit.com\SharpZIP\src\Compression\DeflaterHuffman.cs" />
-    <Compile Include="Assets\Plugins\whydoidoit.com\SharpZIP\src\Compression\DeflaterPending.cs" />
-    <Compile Include="Assets\Plugins\whydoidoit.com\SharpZIP\src\Compression\Inflater.cs" />
-    <Compile Include="Assets\Plugins\whydoidoit.com\SharpZIP\src\Compression\InflaterDynHeader.cs" />
-    <Compile Include="Assets\Plugins\whydoidoit.com\SharpZIP\src\Compression\InflaterHuffmanTree.cs" />
-    <Compile Include="Assets\Plugins\whydoidoit.com\SharpZIP\src\Compression\PendingBuffer.cs" />
-    <Compile Include="Assets\Plugins\whydoidoit.com\SharpZIP\src\Compression\Streams\DeflaterOutputStream.cs" />
-    <Compile Include="Assets\Plugins\whydoidoit.com\SharpZIP\src\Compression\Streams\InflaterInputStream.cs" />
-    <Compile Include="Assets\Plugins\whydoidoit.com\SharpZIP\src\Compression\Streams\OutputWindow.cs" />
-    <Compile Include="Assets\Plugins\whydoidoit.com\SharpZIP\src\Compression\Streams\StreamManipulator.cs" />
-    <Compile Include="Assets\Plugins\whydoidoit.com\SharpZIP\src\Encryption\PkzipClassic.cs" />
-    <Compile Include="Assets\Plugins\whydoidoit.com\SharpZIP\src\Encryption\ZipAESStream.cs" />
-    <Compile Include="Assets\Plugins\whydoidoit.com\SharpZIP\src\Encryption\ZipAESTransform.cs" />
-    <Compile Include="Assets\Plugins\whydoidoit.com\SharpZIP\src\SharpZipBaseException.cs" />
-    <Compile Include="Assets\Plugins\whydoidoit.com\SharpZIP\src\ZipConstants.cs" />
-    <Compile Include="Assets\Plugins\whydoidoit.com\SharpZIP\src\ZipEntry.cs" />
-    <Compile Include="Assets\Plugins\whydoidoit.com\SharpZIP\src\ZipExtraData.cs" />
-    <Compile Include="Assets\Plugins\whydoidoit.com\SharpZIP\src\ZipHelperStream.cs" />
-    <Compile Include="Assets\Plugins\whydoidoit.com\UnitySerializerVersion.cs" />
-    <Compile Include="Assets\Plugins\whydoidoit.com\Utility\Types.cs" />
     <Compile Include="Assets\Standard Assets\Character Controllers\Sources\Scripts\MouseLook.cs" />
     <Compile Include="Assets\Standard Assets\Scripts\General Scripts\ActivateTrigger.cs" />
     <Compile Include="Assets\Standard Assets\Scripts\Utility Scripts\CombineChildren.cs" />
@@ -210,7 +120,6 @@
     <None Include="Assets\Plugins\Android\facebook\res\values-ldpi\dimens.xml" />
     <None Include="Assets\Plugins\Android\facebook\res\values-mdpi\dimens.xml" />
     <None Include="Assets\Plugins\Android\facebook\res\values-xhdpi\dimens.xml" />
-    <None Include="Assets\Plugins\whydoidoit.com\license.txt" />
     <None Include="Assets\Standard Assets (Mobile)\Shaders\Lightmap Shaders (Legacy)\Mobile Lightmap AlphaTest.shader" />
     <None Include="Assets\Standard Assets (Mobile)\Shaders\Lightmap Shaders (Legacy)\Mobile Lightmap Only.shader" />
     <None Include="Assets\Standard Assets (Mobile)\Shaders\Lightmap Shaders (Legacy)\Mobile Lightmap Reflective.shader" />

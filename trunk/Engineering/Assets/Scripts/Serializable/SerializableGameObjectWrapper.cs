@@ -36,8 +36,8 @@ namespace Assets.Scripts.Serializable
                     rotation = ObjConverter.convertFromNative(t.transform.rotation.eulerAngles),
                     scale = ObjConverter.convertFromNative(t.transform.localScale)
                 };
-                s.name = t.GetFullName() != null ? t.GetFullName() : t.name ;
-                s.objectType = t.GetType().SerializeToString();
+                s.name = t.name ;
+                //s.objectType = t
                 if (t.renderer != null)
                 {
                     s.hasRenderer = true;
@@ -86,7 +86,7 @@ namespace Assets.Scripts.Serializable
             public string parent;
             public string name;
             public List<SerializableGameObject> children;
-            public string objectType = typeof(UnityEngine.Object).SerializeToString();
+//            public string objectType = typeof(UnityEngine.Object).SerializeToString();
             public bool hasRenderer = false;
 
             public SerializableGameObject()

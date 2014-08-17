@@ -23,7 +23,7 @@ namespace MAIN_SETTINGS
         #region LevelData
 
         static public LEVEL_NUM m_currentLevel = LEVEL_NUM.INVALID_LVL;
-        static public double m_currentLevelSpeed;
+        static public float m_currentLevelSpeed = 50;
         #endregion
 
         static public int m_playerName;
@@ -74,12 +74,13 @@ namespace MAIN_SETTINGS
 
         void Awake()
         {
-            //DEDUPE. GET STORAGE PATHS? 
+            
         }
 
         // This function is called every fixed framerate frame, if the MonoBehaviour is enabled (Since v1.0)
         void FixedUpdate()
         {
+            DebugPanel.AddText(PERSISTENTDATAPATH);
         }
 
         // LateUpdate is called every frame, if the Behaviour is enabled (Since v1.0)
