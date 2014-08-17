@@ -1,5 +1,5 @@
 ﻿
-#if UNITY_WINDOWS
+#if UNITY_WINDOWS || UNITY_EDITOR
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
@@ -13,6 +13,7 @@ public class ObjectBuilderScript : MonoBehaviour
 {
 	public GameObject obj;
 	public Vector3 spawnPoint;
+    public GameObject m_mainObjectToSerialize;
 
 	public void BuildObject()
 	{
@@ -23,7 +24,7 @@ public class ObjectBuilderScript : MonoBehaviour
 	public void SerializeObject()
 	{
 		List<GameObject> obj = new List<GameObject>();
-		object[] allObjects = FindObjectsOfTypeAll(typeof(GameObject));
+        object[] allObjects = FindObjectsOfTypeAll(typeof(GameObject));
 		foreach(object thisObject in allObjects)
 		{
 			if (((GameObject) thisObject).activeInHierarchy)

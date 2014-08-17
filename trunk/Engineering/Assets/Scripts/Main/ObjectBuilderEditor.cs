@@ -1,26 +1,28 @@
-﻿//using UnityEngine;
-//#if UNITY_ANDROID
-//using UnityEditor;
-//using UnityEditorInternal;
+﻿using UnityEngine;
 
-//[CustomEditor(typeof(ObjectBuilderScript))]
-//public class ObjectBuilderEditor : Editor
-//{
-//    public override void OnInspectorGUI()
-//    {
-        
-//        DrawDefaultInspector();
-        
-//        ObjectBuilderScript myScript = (ObjectBuilderScript)target;
-//        if(GUILayout.Button("Build"))
-//        {
-//            myScript.BuildObject();
-//        }
+#if UNITY_EDITOR
+using UnityEditor;
+using UnityEditorInternal;
 
-//        if ( GUILayout.Button ( "Serialize " ))
-//        {
-//            myScript.SerializeObject();
-//        }
-//    }
-//}
-//#endif
+
+[CustomEditor(typeof(ObjectBuilderScript))]
+public class ObjectBuilderEditor : Editor
+{
+    public override void OnInspectorGUI()
+    {
+
+        DrawDefaultInspector();
+
+        ObjectBuilderScript myScript = (ObjectBuilderScript)target;
+        if (GUILayout.Button("Build"))
+        {
+            myScript.BuildObject();
+        }
+
+        if (GUILayout.Button("Serialize "))
+        {
+            myScript.SerializeObject();
+        }
+    }
+}
+#endif

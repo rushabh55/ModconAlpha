@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MAIN_SETTINGS;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -22,12 +23,12 @@ namespace Assets.Scripts.Serializable
         {
             System.Xml.Serialization.XmlSerializer xmls =
                 new System.Xml.Serialization.XmlSerializer(typeof(List<SerializableGameObject>));
-            string path = string.Empty;
-
+            string path = Settings.PERSISTENTDATAPATH + "data.dat";
+            Debug.Log(path);
             System.IO.FileStream fs = new System.IO.FileStream(path, System.IO.FileMode.OpenOrCreate);
             DebugPanel.AddText(path);
             foreach (var t in list)
-            {
+            {                
                 SerializableGameObject s = new SerializableGameObject();
                 s.transform = new SerializableTransform()
                 {
@@ -35,10 +36,20 @@ namespace Assets.Scripts.Serializable
                     rotation = ObjConverter.convertFromNative(t.transform.rotation.eulerAngles),
                     scale = ObjConverter.convertFromNative(t.transform.localScale)
                 };
-                s.path = "afasf";
-                s.tag = "afs";
-
-                _obj.Add(s);
+                s.name = t.GetFullName() != null ? t.GetFullName() : t.name ;
+                s.objectType = t.GetType().SerializeToString();
+                if (t.renderer != null)
+                {
+                    s.hasRenderer = true;
+                }
+                else
+                {
+                    s.hasRenderer = false;
+                }
+                if (s.name.Contains("Scene"))
+                {
+                    _obj.Add(s);
+                }
             }
 
             xmls.Serialize(fs, _obj);
@@ -72,7 +83,11 @@ namespace Assets.Scripts.Serializable
         {
             public string path;
             public SerializableTransform transform;
-            public string tag;
+            public string parent;
+            public string name;
+            public List<SerializableGameObject> children;
+            public string objectType = typeof(UnityEngine.Object).SerializeToString();
+            public bool hasRenderer = false;
 
             public SerializableGameObject()
             {
