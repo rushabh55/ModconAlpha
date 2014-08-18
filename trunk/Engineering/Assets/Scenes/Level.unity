@@ -462,11 +462,11 @@ ParticleRenderer:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   serializedVersion: 2
-  m_CameraVelocityScale: 2
+  m_CameraVelocityScale: 0
   m_StretchParticles: 0
   m_LengthScale: 1
   m_VelocityScale: 1
-  m_MaxParticleSize: 100
+  m_MaxParticleSize: 1e+08
   UV Animation:
     x Tile: 1
     y Tile: 1
@@ -525,8 +525,8 @@ EllipsoidParticleEmitter:
   tangentVelocity: {x: 0, y: 0, z: 0}
   angularVelocity: 0
   rndAngularVelocity: 10
-  rndRotation: 1
-  Simulate in Worldspace?: 1
+  rndRotation: 0
+  Simulate in Worldspace?: 0
   m_OneShot: 0
   m_Ellipsoid: {x: 100, y: 30, z: 150}
   m_MinEmitterRange: 0
@@ -3860,6 +3860,38 @@ Prefab:
     - target: {fileID: 11400008, guid: 8dc36cd4fb6add346b2c45f74df5702c, type: 2}
       propertyPath: m_SplatMapDistance
       value: 123
+      objectReference: {fileID: 0}
+    - target: {fileID: 2600006, guid: 8dc36cd4fb6add346b2c45f74df5702c, type: 2}
+      propertyPath: m_UseLightProbes
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100018, guid: 8dc36cd4fb6add346b2c45f74df5702c, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2600006, guid: 8dc36cd4fb6add346b2c45f74df5702c, type: 2}
+      propertyPath: m_MaxParticleSize
+      value: 1e+08
+      objectReference: {fileID: 0}
+    - target: {fileID: 1500006, guid: 8dc36cd4fb6add346b2c45f74df5702c, type: 2}
+      propertyPath: m_MinEmitterRange
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1500006, guid: 8dc36cd4fb6add346b2c45f74df5702c, type: 2}
+      propertyPath: rndRotation
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1500006, guid: 8dc36cd4fb6add346b2c45f74df5702c, type: 2}
+      propertyPath: Simulate in Worldspace?
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1200006, guid: 8dc36cd4fb6add346b2c45f74df5702c, type: 2}
+      propertyPath: Does Animate Color?
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2600006, guid: 8dc36cd4fb6add346b2c45f74df5702c, type: 2}
+      propertyPath: m_CameraVelocityScale
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8dc36cd4fb6add346b2c45f74df5702c, type: 2}
