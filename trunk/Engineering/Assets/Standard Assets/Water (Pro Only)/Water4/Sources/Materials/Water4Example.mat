@@ -177,7 +177,7 @@ Material:
       data:
         first:
           name: _FresnelScale
-        second: .657142818
+        second: 4
       data:
         first:
           name: _GerstnerIntensity
@@ -306,7 +306,7 @@ Material:
       data:
         first:
           name: _DistortParams
-        second: {r: -4, g: .242857143, b: 1.85306406, a: -.531428456}
+        second: {r: -4, g: .242857143, b: 10, a: -.531428456}
       data:
         first:
           name: _InvFadeParemeter
@@ -346,7 +346,7 @@ Material:
       data:
         first:
           name: _Foam
-        second: {r: .426666677, g: .486666679, b: 0, a: 0}
+        second: {r: 1, g: 1, b: 0, a: 0}
       data:
         first:
           name: _GAmplitude
