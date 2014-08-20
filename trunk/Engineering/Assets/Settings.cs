@@ -1,10 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System;
+using System.IO;
+using System.Linq;
+using System.Collections.Generic;
 
 namespace MAIN_SETTINGS
 {
-#if UNITY_ANDROID || UNITY_WP8 || UNITY_STANDALONE_WIN
+//#if UNITY_ANDROID || UNITY_WP8 || UNITY_STANDALONE_WIN
     public enum LEVEL_NUM
     {
         INVALID_LVL = 0,
@@ -93,7 +96,7 @@ namespace MAIN_SETTINGS
         // This function is called every fixed framerate frame, if the MonoBehaviour is enabled (Since v1.0)
         void FixedUpdate()
         {
-            DebugPanel.AddText(PERSISTENTDATAPATH);
+            //DebugPanel.AddText(PERSISTENTDATAPATH);
         }
 
         // LateUpdate is called every frame, if the Behaviour is enabled (Since v1.0)
@@ -150,11 +153,23 @@ namespace MAIN_SETTINGS
             m_screenWidth = (ushort)Screen.width;
             m_screenHeight = (ushort)Screen.height;
             m_aspectRatio = m_screenWidth / m_screenHeight;
-            DebugPanel.AddText(PERSISTENTDATAPATH, true);
-            DebugPanel.AddText(DATAPATH);
+            //DebugPanel.AddText(PERSISTENTDATAPATH, true);
+            DebugPanel.AddText("", false);
+            //DebugPanel.AddText(Application.streamingAssetsPath);
+            List<string> files = Directory.GetFiles(PERSISTENTDATAPATH).ToList();
+            //files.AddRange(Directory.GetDirectories(PERSISTENTDATAPATH));
+            files.AddRange(Directory.GetDirectories(Application.streamingAssetsPath));
+            files.AddRange(Directory.GetFiles(Application.streamingAssetsPath));
+            Debug.Log("DATA: " + Application.dataPath);
+            Debug.Log("DATA: " + Application.persistentDataPath);
+            
+            //foreach( var f in files )
+            //{
+            //    DebugPanel.AddText(f);
+            //}
         }
     }
 
 
-#endif
+//#endif
 }

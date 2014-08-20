@@ -21,7 +21,7 @@ public class DebugPanel : MonoBehaviour {
             _objCollection = null;
             _objCollection = new StringBuilder(1500);
         }
-        _objCollection.Append(s + "\n");
+        _objCollection.Append("\n" + s + "\n");
     }
 
     void OnGUI()

@@ -85,7 +85,7 @@ public class PinchZoom : MonoBehaviour
             if ( scrollVal != 0 )
             {
                 _activeCamera.fieldOfView += scrollVal * perspectiveZoomSpeed;
-                _activeCamera.fieldOfView = Mathf.Clamp(camera.fieldOfView, 0.1f, 179.9f);
+                _activeCamera.fieldOfView = Mathf.Clamp(camera.fieldOfView, 30f, 100f);
             }
         }
         else

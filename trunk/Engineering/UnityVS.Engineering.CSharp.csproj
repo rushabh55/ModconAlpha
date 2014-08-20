@@ -117,6 +117,7 @@
     <Compile Include="Assets\Sky FX Pack\Scripts\RotateBehaviour.cs" />
     <Compile Include="Assets\Sky FX Pack\Scripts\ScrollBehaviour.cs" />
     <Compile Include="Assets\iTween\iTween.cs" />
+    <Compile Include="Assets\runtimeResourceLoader.cs" />
     <None Include="Assets\0000 ats V2 package\ats pathShader Package\Shader\ats Road Path bumped diffuse alphatest.shader" />
     <None Include="Assets\0000 ats V2 package\ats vertexLitShader Package\Shader\atsv2 vertexlit.shader" />
     <None Include="Assets\0000 ats V2 package\atsV2 billboardShader package\Tree.cginc" />
@@ -168,6 +169,7 @@
     <None Include="Assets\Plugins\Android\facebook\res\values-ldpi\dimens.xml" />
     <None Include="Assets\Plugins\Android\facebook\res\values-mdpi\dimens.xml" />
     <None Include="Assets\Plugins\Android\facebook\res\values-xhdpi\dimens.xml" />
+    <None Include="Assets\Resources\DebugKey.txt" />
     <None Include="Assets\Standard Assets (Mobile)\Shaders\Lightmap Shaders (Legacy)\Mobile Lightmap AlphaTest.shader" />
     <None Include="Assets\Standard Assets (Mobile)\Shaders\Lightmap Shaders (Legacy)\Mobile Lightmap Only.shader" />
     <None Include="Assets\Standard Assets (Mobile)\Shaders\Lightmap Shaders (Legacy)\Mobile Lightmap Reflective.shader" />
@@ -188,6 +190,7 @@
     <None Include="Assets\Standard Assets\Water (Pro Only)\Water4\Sources\Shaders\FX-SimpleWater4.shader" />
     <None Include="Assets\Standard Assets\Water (Pro Only)\Water4\Sources\Shaders\FX-Water4.shader" />
     <None Include="Assets\Standard Assets\Water (Pro Only)\Water4\Sources\Shaders\WaterInclude.cginc" />
+    <None Include="Assets\StreamingAssets\DebugKey.txt" />
     <None Include="Assets\Facebook\Scripts\IFacebook.dll" />
     <None Include="Assets\PlayMaker\PlayMaker.dll" />
     <None Include="Assets\TouchScript\Plugins\TouchScript.dll" />
