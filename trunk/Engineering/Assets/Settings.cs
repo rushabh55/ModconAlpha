@@ -158,8 +158,8 @@ namespace MAIN_SETTINGS
             //DebugPanel.AddText(Application.streamingAssetsPath);
             List<string> files = Directory.GetFiles(PERSISTENTDATAPATH).ToList();
             //files.AddRange(Directory.GetDirectories(PERSISTENTDATAPATH));
-            files.AddRange(Directory.GetDirectories(Application.streamingAssetsPath));
-            files.AddRange(Directory.GetFiles(Application.streamingAssetsPath));
+          //  files.AddRange(Directory.GetDirectories(Application.streamingAssetsPath));
+            //files.AddRange(Directory.GetFiles(Application.streamingAssetsPath));
             Debug.Log("DATA: " + Application.dataPath);
             Debug.Log("DATA: " + Application.persistentDataPath);
             
