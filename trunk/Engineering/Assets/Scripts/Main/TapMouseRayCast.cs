@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using MAIN_SETTINGS;
 
 public class TapMouseRayCast : MonoBehaviour 
 {
@@ -7,6 +8,8 @@ public class TapMouseRayCast : MonoBehaviour
     public GameObject[] _objsToHide;
     public GameObject _mainMenu;
     public GameObject _settingsMenu;
+
+	public AudioSource _clickSound;
 
     public int m_animSpeed;
     public enum UIState
@@ -114,7 +117,8 @@ public class TapMouseRayCast : MonoBehaviour
                 {
                     try
                     {
-                        hit.collider.renderer.material.color = Color.green;
+						SoundManager.PlaySafe ( ref _clickSound );
+						hit.collider.renderer.material.color = Color.green;
                         Application.LoadLevel("Level");
                     }
                     catch (System.Exception e)
@@ -126,7 +130,8 @@ public class TapMouseRayCast : MonoBehaviour
                 if ( hit.collider.name == "Options" )
                 {
                     try
-                    {
+					{
+						SoundManager.PlaySafe ( ref _clickSound );
                         hit.collider.renderer.material.color = Color.green;
                         changeState(UIState.OPTIONS);
                     }
@@ -142,7 +147,8 @@ public class TapMouseRayCast : MonoBehaviour
                 if ( hit.collider.name == "Back" )
                 {
                     try
-                    {
+					{
+						SoundManager.PlaySafe ( ref _clickSound );
                         hit.collider.renderer.material.color = Color.green;
                         changeState(UIState.MAINMENU);
                     }
@@ -151,8 +157,37 @@ public class TapMouseRayCast : MonoBehaviour
                         DebugPanel.AddText(e.Message, true);
                     }
                 }
+
+				else
+				if ( hit.collider.name == "MuteOn") 
+				{
+					try 
+					{
+						SoundManager.PlaySafe ( ref _clickSound );
+						Settings.setMute ( true );
+					}
+					catch ( System.Exception e )
+					{
+						DebugPanel.AddText ( e.Message, true );
+					}
+				}
+				else
+				if ( hit.collider.name == "MuteOff" )
+				{
+					try
+					{
+						SoundManager.PlaySafe ( ref _clickSound );
+						Settings.setMute( false );
+					}
+					catch( System.Exception e ) 
+					{
+						DebugPanel.AddText( e.Message, true );
+					}
+				}
             }
-        }
+
+			Debug.Log ( hit.collider.name );
+		}
     }
 
     void OnGUI()

@@ -83,10 +83,22 @@ namespace MAIN_SETTINGS
                 return Application.dataPath;
             }
         }
+		static public bool IsMute 
+		{
+			get 
+			{
+				return m_isMute;
+			}
+		}
         private static UInt16 m_screenWidth;
         private static UInt16 m_screenHeight;
         private static double m_aspectRatio;
+		private static bool m_isMute;
 
+		public static void setMute ( bool mute )
+		{
+			m_isMute = mute;
+		}
 
         void Awake()
         {
@@ -153,20 +165,10 @@ namespace MAIN_SETTINGS
             m_screenWidth = (ushort)Screen.width;
             m_screenHeight = (ushort)Screen.height;
             m_aspectRatio = m_screenWidth / m_screenHeight;
-            //DebugPanel.AddText(PERSISTENTDATAPATH, true);
             DebugPanel.AddText("", false);
-            //DebugPanel.AddText(Application.streamingAssetsPath);
             List<string> files = Directory.GetFiles(PERSISTENTDATAPATH).ToList();
-            //files.AddRange(Directory.GetDirectories(PERSISTENTDATAPATH));
-          //  files.AddRange(Directory.GetDirectories(Application.streamingAssetsPath));
-            //files.AddRange(Directory.GetFiles(Application.streamingAssetsPath));
             Debug.Log("DATA: " + Application.dataPath);
-            Debug.Log("DATA: " + Application.persistentDataPath);
-            
-            //foreach( var f in files )
-            //{
-            //    DebugPanel.AddText(f);
-            //}
+            Debug.Log("PERSISTANT DATA: " + Application.persistentDataPath);
         }
     }
 
