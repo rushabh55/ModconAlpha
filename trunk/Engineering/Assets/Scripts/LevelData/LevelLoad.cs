@@ -15,13 +15,13 @@ public class LevelLoad
     }
 
     
-    private LEVEL_NUM m_levelNum = LEVEL_NUM.INVALID_LVL;
+    public LevelData.LEVEL_NUM m_levelNum = LevelData.LEVEL_NUM.INVALID_LVL;
 	// Use this for initialization
     private LevelLoad() 
     {
-	    if ( m_levelNum == LEVEL_NUM.INVALID_LVL || m_levelNum == LEVEL_NUM.NUM_LEVELS )
+        if (m_levelNum == LevelData.LEVEL_NUM.INVALID_LVL || m_levelNum == LevelData.LEVEL_NUM.NUM_LEVELS)
         {
-            m_levelNum = LEVEL_NUM.LV_01;
+            m_levelNum = LevelData.LEVEL_NUM.LV_01;
         }
 	}
 	

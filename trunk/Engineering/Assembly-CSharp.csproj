@@ -72,7 +72,6 @@
      <Compile Include="Assets\Scripts\Main\DebugPanel.cs" />
      <Compile Include="Assets\Scripts\Main\EventInvoker.cs" />
      <Compile Include="Assets\Scripts\Main\FacebookAuth.cs" />
-     <Compile Include="Assets\Scripts\Main\LevelData.cs" />
      <Compile Include="Assets\Scripts\Main\Loader.cs" />
      <Compile Include="Assets\Scripts\Main\ObjectBuilderEditor.cs" />
      <Compile Include="Assets\Scripts\Main\ObjectBuilderScript.cs" />
@@ -82,7 +81,6 @@
      <Compile Include="Assets\Scripts\Main\TapMouseRayCast.cs" />
      <Compile Include="Assets\Scripts\Main\WeatherRandomizer.cs" />
      <Compile Include="Assets\Scripts\Main\WorkerController.cs" />
-     <Compile Include="Assets\Scripts\Serializable\LevelDataSerializable.cs" />
      <Compile Include="Assets\Scripts\Serializable\ObjectConverter.cs" />
      <Compile Include="Assets\Scripts\Serializable\SerializableGameObject.cs" />
      <Compile Include="Assets\Scripts\Serializable\SerializableGameObjectWrapper.cs" />
