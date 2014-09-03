@@ -50,9 +50,13 @@ public class SimplePlayerTranslate : MonoBehaviour , ILevelObject
         _player.transform.position = Vector3.MoveTowards(_player.transform.position, end.transform.position, Time.deltaTime * Settings.m_currentLevelSpeed);        
         if ( AdjustPositions.isDoubleEnabled )
         {
-            if ( _player2 != null )
+            if (_player2 != null)
             {
-                _player2.transform.position = Vector3.MoveTowards(_player2.transform.position, end2.transform.position, Time.deltaTime * Settings.m_currentLevelSpeed );
+                try
+                {
+                    _player2.transform.position = Vector3.MoveTowards(_player2.transform.position, end2.transform.position, Time.deltaTime * Settings.m_currentLevelSpeed);
+                }
+                catch (System.Exception e) { }
             }
         }
 	}

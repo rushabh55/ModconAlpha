@@ -1,8 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.21005.1
-MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnityVS.Engineering.CSharp", "UnityVS.Engineering.CSharp.csproj", "{453D0C29-CAA9-C7F4-9051-C0CF97922BA6}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnityVS.Engineering.CSharp.Editor", "UnityVS.Engineering.CSharp.Editor.csproj", "{0479EC5D-8E95-DB7D-498B-AF5FC6C3725E}"
