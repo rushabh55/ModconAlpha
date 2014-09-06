@@ -4,22 +4,45 @@ using System;
 using System.IO;
 using System.Linq;
 using System.Collections.Generic;
+using LevelData;
 
 namespace MAIN_SETTINGS
 {
 
-//#if UNITY_ANDROID || UNITY_WP8 || UNITY_STANDALONE_WIN
+    #region LevelData
+
+    public enum LEVEL_NUM
+    {
+        INVALID_LVL = 0,
+
+        LV_01 = 1 << 1,
+        LV_02 = 1 << 2,
+        LV_03 = 1 << 3,
+        LV_04 = 1 << 4,
+        LV_05 = 1 << 5,
+        LV_06 = 1 << 6,
+        LV_07 = 1 << 7,
+        LV_08 = 1 << 8,
+        LV_09 = 1 << 9,
+        LV_10 = 1 << 10,
+        LV_11 = 1 << 11,
+        LV_12 = 1 << 12,
+        LV_13 = 1 << 13,
+        LV_14 = 1 << 14,
+        LV_15 = 1 << 15,
+
+        NUM_LEVELS = 1 << 16
+        //uint32 will do for this
+    }
+
+    #endregion
 
 
     public class Settings : MonoBehaviour
     {
         public Texture2D m_mouseTexture;
-
-        #region LevelData
-
-        static public float m_currentLevelSpeed = 50;
-        #endregion
-
+        LEVEL_NUM m_levelNo;
+        
         static public int m_playerName;
         static public UInt16 SCREENWIDTH
         {
@@ -73,6 +96,7 @@ namespace MAIN_SETTINGS
         private static double m_aspectRatio;
 		private static bool m_isMute;
 
+        private static Level m_levelData = null;
 		public static void setMute ( bool mute )
 		{
 			m_isMute = mute;
@@ -140,6 +164,14 @@ namespace MAIN_SETTINGS
 
         void Update()
         {
+            if (m_levelData == null)
+            {
+                m_levelNo = LEVEL_NUM.LV_01;
+                m_levelData = BinaryLoader.LoadLevel(m_levelNo);
+
+                m_currentLevelSpeed = m_levelData.speed;
+                
+            }
             m_screenWidth = (ushort)Screen.width;
             m_screenHeight = (ushort)Screen.height;
             m_aspectRatio = m_screenWidth / m_screenHeight;
@@ -148,6 +180,8 @@ namespace MAIN_SETTINGS
             Debug.Log("DATA: " + Application.dataPath);
             Debug.Log("PERSISTANT DATA: " + Application.persistentDataPath);
         }
+
+        public static float m_currentLevelSpeed { get; set; }
     }
 
 

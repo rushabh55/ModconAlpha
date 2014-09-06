@@ -1,0 +1,108 @@
+<?xml version="1.0"?>
+<ArrayOfLevel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Level>
+    <speed>10</speed>
+    <name>Level 0</name>
+    <noOfCharacters>1</noOfCharacters>
+    <pathOfLandmark />
+    <weapon>None</weapon>
+  </Level>
+  <Level>
+    <speed>12.5</speed>
+    <name>Level 1</name>
+    <noOfCharacters>1</noOfCharacters>
+    <pathOfLandmark />
+    <weapon>None</weapon>
+  </Level>
+  <Level>
+    <speed>17.5</speed>
+    <name>Level 2</name>
+    <noOfCharacters>1</noOfCharacters>
+    <pathOfLandmark />
+    <weapon>None</weapon>
+  </Level>
+  <Level>
+    <speed>25</speed>
+    <name>Level 3</name>
+    <noOfCharacters>1</noOfCharacters>
+    <pathOfLandmark />
+    <weapon>None</weapon>
+  </Level>
+  <Level>
+    <speed>35</speed>
+    <name>Level 4</name>
+    <noOfCharacters>1</noOfCharacters>
+    <pathOfLandmark />
+    <weapon>None</weapon>
+  </Level>
+  <Level>
+    <speed>47.5</speed>
+    <name>Level 5</name>
+    <noOfCharacters>2</noOfCharacters>
+    <pathOfLandmark />
+    <weapon>None</weapon>
+  </Level>
+  <Level>
+    <speed>62.5</speed>
+    <name>Level 6</name>
+    <noOfCharacters>2</noOfCharacters>
+    <pathOfLandmark />
+    <weapon>None</weapon>
+  </Level>
+  <Level>
+    <speed>80</speed>
+    <name>Level 7</name>
+    <noOfCharacters>2</noOfCharacters>
+    <pathOfLandmark />
+    <weapon>None</weapon>
+  </Level>
+  <Level>
+    <speed>100</speed>
+    <name>Level 8</name>
+    <noOfCharacters>2</noOfCharacters>
+    <pathOfLandmark />
+    <weapon>None</weapon>
+  </Level>
+  <Level>
+    <speed>122.5</speed>
+    <name>Level 9</name>
+    <noOfCharacters>2</noOfCharacters>
+    <pathOfLandmark />
+    <weapon>None</weapon>
+  </Level>
+  <Level>
+    <speed>147.5</speed>
+    <name>Level 10</name>
+    <noOfCharacters>3</noOfCharacters>
+    <pathOfLandmark />
+    <weapon>None</weapon>
+  </Level>
+  <Level>
+    <speed>175</speed>
+    <name>Level 11</name>
+    <noOfCharacters>3</noOfCharacters>
+    <pathOfLandmark />
+    <weapon>None</weapon>
+  </Level>
+  <Level>
+    <speed>205</speed>
+    <name>Level 12</name>
+    <noOfCharacters>3</noOfCharacters>
+    <pathOfLandmark />
+    <weapon>None</weapon>
+  </Level>
+  <Level>
+    <speed>237.5</speed>
+    <name>Level 13</name>
+    <noOfCharacters>3</noOfCharacters>
+    <pathOfLandmark />
+    <weapon>None</weapon>
+  </Level>
+  <Level>
+    <speed>272.5</speed>
+    <name>Level 14</name>
+    <noOfCharacters>3</noOfCharacters>
+    <pathOfLandmark />
+    <weapon>None</weapon>
+  </Level>
+</ArrayOfLevel>
