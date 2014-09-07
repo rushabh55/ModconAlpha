@@ -11,8 +11,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnityVS.Engineering.CSharp.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataMake", "..\DataMake\DataMake\DataMake.csproj", "{8F9A18EE-F10F-44C8-B1A9-8C538BAF844A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LevelData", "LevelData\LevelData.csproj", "{E5A24D39-4F37-4374-AAC1-AF5E88F2C545}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,10 +37,6 @@ Global
 		{8F9A18EE-F10F-44C8-B1A9-8C538BAF844A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8F9A18EE-F10F-44C8-B1A9-8C538BAF844A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8F9A18EE-F10F-44C8-B1A9-8C538BAF844A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E5A24D39-4F37-4374-AAC1-AF5E88F2C545}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E5A24D39-4F37-4374-AAC1-AF5E88F2C545}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E5A24D39-4F37-4374-AAC1-AF5E88F2C545}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E5A24D39-4F37-4374-AAC1-AF5E88F2C545}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

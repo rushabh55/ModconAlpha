@@ -15,23 +15,23 @@ namespace MAIN_SETTINGS
     {
         INVALID_LVL = 0,
 
-        LV_01 = 1 << 1,
-        LV_02 = 1 << 2,
-        LV_03 = 1 << 3,
-        LV_04 = 1 << 4,
-        LV_05 = 1 << 5,
-        LV_06 = 1 << 6,
-        LV_07 = 1 << 7,
-        LV_08 = 1 << 8,
-        LV_09 = 1 << 9,
-        LV_10 = 1 << 10,
-        LV_11 = 1 << 11,
-        LV_12 = 1 << 12,
-        LV_13 = 1 << 13,
-        LV_14 = 1 << 14,
-        LV_15 = 1 << 15,
+        LV_01 =  1,
+        LV_02 =  2,
+        LV_03 =  3,
+        LV_04 =  4,
+        LV_05 =  5,
+        LV_06 =  6,
+        LV_07 =  7,
+        LV_08 =  8,
+        LV_09 =  9,
+        LV_10 =  10,
+        LV_11 =  11,
+        LV_12 =  12,
+        LV_13 =  13,
+        LV_14 =  14,
+        LV_15 =  15,
 
-        NUM_LEVELS = 1 << 16
+        NUM_LEVELS = 16
         //uint32 will do for this
     }
 
@@ -97,6 +97,7 @@ namespace MAIN_SETTINGS
 		private static bool m_isMute;
 
         private static Level m_levelData = null;
+        public static string dataFileName = PERSISTENTDATAPATH + @"data.xml";
 		public static void setMute ( bool mute )
 		{
 			m_isMute = mute;

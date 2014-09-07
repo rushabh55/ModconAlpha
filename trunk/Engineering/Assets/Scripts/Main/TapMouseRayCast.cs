@@ -38,6 +38,8 @@ public class TapMouseRayCast : MonoBehaviour
         m_currentState = UIState.MAINMENU;
 
         Debug.Log(Application.loadedLevelName);
+
+        
 	}
 	
 	// Update is called once per frame

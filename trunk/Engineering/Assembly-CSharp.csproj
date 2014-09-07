@@ -73,6 +73,7 @@
      <Compile Include="Assets\Scripts\Main\DebugPanel.cs" />
      <Compile Include="Assets\Scripts\Main\EventInvoker.cs" />
      <Compile Include="Assets\Scripts\Main\FacebookAuth.cs" />
+     <Compile Include="Assets\Scripts\Main\FirstStart.cs" />
      <Compile Include="Assets\Scripts\Main\Loader.cs" />
      <Compile Include="Assets\Scripts\Main\ObjectBuilderEditor.cs" />
      <Compile Include="Assets\Scripts\Main\ObjectBuilderScript.cs" />
@@ -91,7 +92,7 @@
      <Compile Include="Assets\Scripts\Settings.cs" />
      <Compile Include="Assets\Scripts\SoundManager.cs" />
      <Compile Include="Assets\Scripts\runtimeResourceLoader.cs" />
-     <Compile Include="Assets\Scripts\ui\LevelSelect.cs" />
+     <Compile Include="Assets\Scripts\ui\LevelSelector.cs" />
      <Compile Include="Assets\Sky FX Pack\Scripts\LightBeamsControlScript.cs" />
      <Compile Include="Assets\Sky FX Pack\Scripts\LookAtBehaviour.cs" />
      <Compile Include="Assets\Sky FX Pack\Scripts\LookAtCameraBehaviour.cs" />
