@@ -6,3 +6,4 @@ Boo.Lang.dll
 IFacebook.dll
 PlayMaker.dll
 TouchScript.dll
+UnityEngine.UI.dll
