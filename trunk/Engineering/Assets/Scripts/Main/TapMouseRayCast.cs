@@ -121,7 +121,7 @@ public class TapMouseRayCast : MonoBehaviour
                     {
 						SoundManager.PlaySafe ( ref _clickSound );
 						hit.collider.renderer.material.color = Color.green;
-                        Application.LoadLevel("Level");
+                        Application.LoadLevelAdditiveAsync(1);
                     }
                     catch (System.Exception e)
                     {
@@ -197,7 +197,7 @@ public class TapMouseRayCast : MonoBehaviour
         Cursor.SetCursor(_mouseTexture, Vector2.zero, CursorMode.Auto);
         if ( GUI.Button ( new Rect (400, 100, 400, 100), "Load Level"))
         {
-            Application.LoadLevel("Level");
+            Application.LoadLevelAdditiveAsync(1);
         }
 
         if (GUI.Button (new Rect (Screen.width - 250, Screen.height - 80, 250, 80), "Facebook Login"))
@@ -213,6 +213,8 @@ public class TapMouseRayCast : MonoBehaviour
         {
             m_currAnimState = AnimState.MAINMENU_TO_OPTIONS;
             m_currentState = UIState.OPTIONS;
+
+            
         }
         else
         if ( m_currentState == UIState.OPTIONS && state == UIState.MAINMENU )

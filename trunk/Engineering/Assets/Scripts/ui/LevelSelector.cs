@@ -23,6 +23,7 @@ public class LevelSelector : MonoBehaviour {
             {
                 uint levelNo = (uint)System.Convert.ToInt16(hit.collider.name);
                 LEVEL_NUM level = (LEVEL_NUM)levelNo;
+                Application.LoadLevelAsync(2);
                 Debug.Log(level);
             }
         }
@@ -41,6 +42,7 @@ public class LevelSelector : MonoBehaviour {
                 {
                     uint levelNo = (uint)System.Convert.ToInt16(hit.collider.name);
                     LEVEL_NUM level = (LEVEL_NUM)levelNo;
+                    Application.LoadLevelAsync(2);
                     Debug.Log(level);
                 }
             }
