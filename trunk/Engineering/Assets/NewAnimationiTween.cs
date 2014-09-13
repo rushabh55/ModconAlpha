@@ -11,14 +11,6 @@ public class NewAnimationiTween
 	
 	// Update is called once per frame
 	void Update () {
-        Vector3 newPosition = new Vector3(_settingsMenu.transform.position.x,
-                                          _camera.transform.position.y,
-                                          _camera.transform.position.z);
 
-        _camera.transform.position = Vector3.MoveTowards(
-                                       _camera.transform.position,
-                                       newPosition,
-                                       Time.deltaTime * m_animSpeed
-                                       );
 	}
 }

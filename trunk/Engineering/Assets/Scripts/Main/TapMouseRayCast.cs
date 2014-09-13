@@ -135,6 +135,7 @@ public class TapMouseRayCast : MonoBehaviour
 					{
 						SoundManager.PlaySafe ( ref _clickSound );
                         hit.collider.renderer.material.color = Color.green;
+                        iTween.RotateTo(hit.collider.gameObject, new Vector3(0, 0, 90), 10);
                         changeState(UIState.OPTIONS);
                     }
                     catch (System.Exception e)
@@ -186,6 +187,21 @@ public class TapMouseRayCast : MonoBehaviour
 						DebugPanel.AddText( e.Message, true );
 					}
 				}
+                else
+                if ( hit.collider.name == "Easy")
+                {
+                    Settings.m_difficulty = Difficulty.Easy;
+                }
+                else
+                if ( hit.collider.name == "Medium")
+                {
+                    Settings.m_difficulty = Difficulty.Medium;
+                }
+                else
+                if( hit.collider.name == "Hard")
+                {
+                    Settings.m_difficulty = Difficulty.Hard;
+                }
             }
 
 			Debug.Log ( hit.collider.name );

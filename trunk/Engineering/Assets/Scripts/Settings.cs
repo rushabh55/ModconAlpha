@@ -11,6 +11,13 @@ namespace MAIN_SETTINGS
 
     #region LevelData
 
+    public enum Difficulty
+    {
+        Easy,
+        Medium,
+        Hard
+    };
+
     public enum LEVEL_NUM
     {
         INVALID_LVL = 0,
@@ -44,6 +51,9 @@ namespace MAIN_SETTINGS
         LEVEL_NUM m_levelNo;
         
         static public int m_playerName;
+
+        static public Difficulty m_difficulty;
+
         static public UInt16 SCREENWIDTH
         {
             get
@@ -111,7 +121,6 @@ namespace MAIN_SETTINGS
         // This function is called every fixed framerate frame, if the MonoBehaviour is enabled (Since v1.0)
         void FixedUpdate()
         {
-            //DebugPanel.AddText(PERSISTENTDATAPATH);
         }
 
         // LateUpdate is called every frame, if the Behaviour is enabled (Since v1.0)
@@ -182,6 +191,15 @@ namespace MAIN_SETTINGS
             Debug.Log("PERSISTANT DATA: " + Application.persistentDataPath);
         }
 
+        public static void Save()
+        {
+            
+        }
+
+        public static void Load()
+        {
+
+        }
         public static float m_currentLevelSpeed { get; set; }
     }
 
