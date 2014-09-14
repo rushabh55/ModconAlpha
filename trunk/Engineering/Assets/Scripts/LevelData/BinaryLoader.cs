@@ -6,7 +6,7 @@ using System.IO;
 using System.Collections.Generic;
 using LevelData;
 public class BinaryLoader : MonoBehaviour {
-   public static Level LoadLevel(MAIN_SETTINGS.LEVEL_NUM levelNo)
+   public static Level LoadLevel ( MAIN_SETTINGS.LEVEL_NUM levelNo )
     {
         XmlSerializer xmls = new XmlSerializer(typeof(List<Level>));
         string debug = string.Empty;

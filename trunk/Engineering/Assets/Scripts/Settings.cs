@@ -48,7 +48,11 @@ namespace MAIN_SETTINGS
     public class Settings : MonoBehaviour
     {
         public Texture2D m_mouseTexture;
-        LEVEL_NUM m_levelNo;
+        public static LEVEL_NUM m_levelNo
+        {
+            get;
+            private set;
+        }
         
         static public int m_playerName;
 
@@ -174,21 +178,10 @@ namespace MAIN_SETTINGS
 
         void Update()
         {
-            if (m_levelData == null)
-            {
-                m_levelNo = LEVEL_NUM.LV_01;
-                m_levelData = BinaryLoader.LoadLevel(m_levelNo);
-
-                m_currentLevelSpeed = m_levelData.speed;
-                
-            }
             m_screenWidth = (ushort)Screen.width;
             m_screenHeight = (ushort)Screen.height;
             m_aspectRatio = m_screenWidth / m_screenHeight;
-            DebugPanel.AddText("", false);
             List<string> files = Directory.GetFiles(PERSISTENTDATAPATH).ToList();
-            Debug.Log("DATA: " + Application.dataPath);
-            Debug.Log("PERSISTANT DATA: " + Application.persistentDataPath);
         }
 
         public static void Save()
@@ -201,6 +194,12 @@ namespace MAIN_SETTINGS
 
         }
         public static float m_currentLevelSpeed { get; set; }
+
+        public static void LoadLevel( LEVEL_NUM num )
+        {
+            m_levelNo = num;
+
+        }
     }
 
 

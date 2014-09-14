@@ -185,7 +185,6 @@
     <None Include="Assets\Plugins\Android\facebook\res\values-ldpi\dimens.xml" />
     <None Include="Assets\Plugins\Android\facebook\res\values-mdpi\dimens.xml" />
     <None Include="Assets\Plugins\Android\facebook\res\values-xhdpi\dimens.xml" />
-    <None Include="Assets\Plugins\whydoidoit.com\license.txt" />
     <None Include="Assets\Standard Assets (Mobile)\Shaders\Lightmap Shaders (Legacy)\Mobile Lightmap AlphaTest.shader" />
     <None Include="Assets\Standard Assets (Mobile)\Shaders\Lightmap Shaders (Legacy)\Mobile Lightmap Only.shader" />
     <None Include="Assets\Standard Assets (Mobile)\Shaders\Lightmap Shaders (Legacy)\Mobile Lightmap Reflective.shader" />

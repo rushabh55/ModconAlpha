@@ -5,6 +5,8 @@ using MAIN_SETTINGS;
 public class LevelSelector : MonoBehaviour {
     public GameObject[] m_levelSprites = null;
     public Camera m_camera;
+    public AudioSource m_click;
+    public AudioSource m_levelEnter;
 	// Update is called once per frame
 	void Update () 
     {
@@ -16,15 +18,20 @@ public class LevelSelector : MonoBehaviour {
     {
         if( Input.mousePresent )
         {
-            var pos = Input.mousePosition;
-            RaycastHit hit = new RaycastHit();
-            Ray ray = m_camera.ScreenPointToRay(pos);
-            if (Physics.Raycast(ray, out hit, 200))
+            if (Input.GetMouseButtonDown(0))
             {
-                uint levelNo = (uint)System.Convert.ToInt16(hit.collider.name);
-                LEVEL_NUM level = (LEVEL_NUM)levelNo;
-                Application.LoadLevelAsync(2);
-                Debug.Log(level);
+                var pos = Input.mousePosition;
+                RaycastHit hit = new RaycastHit();
+                Ray ray = m_camera.ScreenPointToRay(pos);
+                if (Physics.Raycast(ray, out hit, 200))
+                {
+                    SoundManager.PlaySafe(ref m_click);
+                    uint levelNo = (uint)System.Convert.ToInt16(hit.collider.name);
+                    LEVEL_NUM level = (LEVEL_NUM)levelNo;
+                    Application.LoadLevel(2);
+                    Debug.Log(level);
+                    SoundManager.PlaySafe(ref m_levelEnter);
+                }
             }
         }
     }
@@ -40,10 +47,12 @@ public class LevelSelector : MonoBehaviour {
                 Ray ray = m_camera.ScreenPointToRay(pos);
                 if (Physics.Raycast(ray, out hit, 200))
                 {
+                    SoundManager.PlaySafe(ref m_click);
                     uint levelNo = (uint)System.Convert.ToInt16(hit.collider.name);
                     LEVEL_NUM level = (LEVEL_NUM)levelNo;
-                    Application.LoadLevelAsync(2);
+                    Application.LoadLevel(2);
                     Debug.Log(level);
+                    SoundManager.PlaySafe(ref m_levelEnter); 
                 }
             }
         }

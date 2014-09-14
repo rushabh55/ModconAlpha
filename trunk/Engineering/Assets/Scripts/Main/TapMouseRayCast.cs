@@ -9,6 +9,9 @@ public class TapMouseRayCast : MonoBehaviour
     public GameObject _mainMenu;
     public GameObject _settingsMenu;
 
+    public GameObject m_playBtn;
+    public GameObject m_optionsBtn;
+
 	public AudioSource _clickSound;
 
     public int m_animSpeed;
@@ -37,9 +40,7 @@ public class TapMouseRayCast : MonoBehaviour
         Application.targetFrameRate = 3000;
         m_currentState = UIState.MAINMENU;
 
-        Debug.Log(Application.loadedLevelName);
-
-        
+        //Debug.Log(Application.loadedLevelName);
 	}
 	
 	// Update is called once per frame
@@ -113,6 +114,7 @@ public class TapMouseRayCast : MonoBehaviour
         Debug.DrawLine(ray.origin,ray.direction, Color.green);
         if( Physics.Raycast(ray, out hit, 200 ))
         {
+            SoundManager.PlaySafe(ref _clickSound);
             if (m_currentState == UIState.MAINMENU)
             {
                 if ( hit.collider.name == "Play" )
@@ -120,8 +122,8 @@ public class TapMouseRayCast : MonoBehaviour
                     try
                     {
 						SoundManager.PlaySafe ( ref _clickSound );
-						hit.collider.renderer.material.color = Color.green;
-                        Application.LoadLevelAsync(1);
+                        iTween.RotateBy(m_playBtn, new Vector3(0, 0, 90), 10);
+                        Application.LoadLevel(1);
                     }
                     catch (System.Exception e)
                     {
@@ -134,8 +136,7 @@ public class TapMouseRayCast : MonoBehaviour
                     try
 					{
 						SoundManager.PlaySafe ( ref _clickSound );
-                        hit.collider.renderer.material.color = Color.green;
-                        iTween.RotateTo(hit.collider.gameObject, new Vector3(0, 0, 90), 10);
+                        iTween.RotateBy(m_optionsBtn, new Vector3(0, 0, 90), 10);
                         changeState(UIState.OPTIONS);
                     }
                     catch (System.Exception e)
@@ -147,12 +148,12 @@ public class TapMouseRayCast : MonoBehaviour
             else
             if ( m_currentState == UIState.OPTIONS )
             {
-                if ( hit.collider.name == "Back" )
+                if ( hit.collider.name == "back" )
                 {
                     try
 					{
 						SoundManager.PlaySafe ( ref _clickSound );
-                        hit.collider.renderer.material.color = Color.green;
+                        //hit.collider.renderer.material.color = Color.green;
                         changeState(UIState.MAINMENU);
                     }
                     catch (System.Exception e)
@@ -213,7 +214,7 @@ public class TapMouseRayCast : MonoBehaviour
         Cursor.SetCursor(_mouseTexture, Vector2.zero, CursorMode.Auto);
         if ( GUI.Button ( new Rect (400, 100, 400, 100), "Load Level"))
         {
-            Application.LoadLevelAdditiveAsync(1);
+            Application.LoadLevel(1);
         }
 
         if (GUI.Button (new Rect (Screen.width - 250, Screen.height - 80, 250, 80), "Facebook Login"))
