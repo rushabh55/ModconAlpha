@@ -618,7 +618,6 @@ GameObject:
   - 114: {fileID: 295695073}
   - 131: {fileID: 295695074}
   - 114: {fileID: 295695075}
-  - 114: {fileID: 295695076}
   - 114: {fileID: 295695078}
   - 114: {fileID: 295695077}
   - 114: {fileID: 295695079}
@@ -741,18 +740,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a20b12c461625ed4183abef7fbd45694, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_mouseTexture: {fileID: 2800000, guid: fae829e8563a56648a7da08144a40351, type: 3}
---- !u!114 &295695076
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 295695068}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7727c8bb304eccf45b10f6d902911c91, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &295695077
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -789,24 +776,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8812aa6e8c4ee424b9b897ce48f60e11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_skyboxes:
-  - {fileID: 2100000, guid: 9ba05f538ee36044da5cd2a4f14a8b18, type: 2}
-  - {fileID: 2100000, guid: 16522f49031ff414abdf1f83f1b6a36c, type: 2}
-  - {fileID: 2100000, guid: 5ba172cd3918d7c44aa6d04446119a00, type: 2}
-  - {fileID: 2100000, guid: 5aab239cac7fe8a4c931693a7535da5c, type: 2}
-  - {fileID: 2100000, guid: d4d16ca3d56fb7142a32d49bbd323836, type: 2}
-  - {fileID: 2100000, guid: 931987be26c9646429c56f8a4692bb81, type: 2}
-  - {fileID: 2100000, guid: a2126534b3a11b34e977105bd9e3cc03, type: 2}
-  - {fileID: 2100000, guid: da976b1a4f7ebb949b0f71341e4f1821, type: 2}
-  - {fileID: 2100000, guid: 53412155bc1016547b1a77b2333c0380, type: 2}
-  m_weatherEffects:
-  - {fileID: 27178966}
-  - {fileID: 188201967}
-  - {fileID: 1148839681}
-  - {fileID: 1266362902}
-  - {fileID: 1352168549}
-  - {fileID: 624882015}
-  - {fileID: 158240970}
   m_sunLensFlare: {fileID: 1094773629}
 --- !u!114 &295695080
 MonoBehaviour:
@@ -819,7 +788,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a20b12c461625ed4183abef7fbd45694, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_mouseTexture: {fileID: 0}
 --- !u!114 &295695081
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6274,7 +6242,6 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1566900788}
-  - 114: {fileID: 1566900792}
   - 65: {fileID: 1566900789}
   m_Layer: 0
   m_Name: End
@@ -6308,21 +6275,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: .100000001, y: .100000001, z: .100000001}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1566900792
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11400018, guid: 8dc36cd4fb6add346b2c45f74df5702c,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1566900787}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a79ed960c05251343822389ece755210, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 787471772}
-  globals: {fileID: 295695068}
-  m_sPlayerTranslate: {fileID: 295695073}
 --- !u!1 &1646699935
 GameObject:
   m_ObjectHideFlags: 0
@@ -6677,7 +6629,6 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 2045478589}
-  - 114: {fileID: 2045478591}
   - 65: {fileID: 2045478590}
   m_Layer: 0
   m_Name: End
@@ -6711,21 +6662,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: .100000001, y: .100000001, z: .100000001}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &2045478591
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11400036, guid: 8dc36cd4fb6add346b2c45f74df5702c,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2045478588}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a79ed960c05251343822389ece755210, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 5395387}
-  globals: {fileID: 295695068}
-  m_sPlayerTranslate: {fileID: 295695073}
 --- !u!1 &2061513220
 GameObject:
   m_ObjectHideFlags: 0

@@ -47,7 +47,6 @@ namespace MAIN_SETTINGS
 
     public class Settings : MonoBehaviour
     {
-        public Texture2D m_mouseTexture;
         public static LEVEL_NUM m_levelNo
         {
             get;
@@ -164,7 +163,6 @@ namespace MAIN_SETTINGS
 
         void OnGUI()
         {
-            Cursor.SetCursor(m_mouseTexture, Vector2.zero, CursorMode.Auto);
         }
 
 
@@ -195,9 +193,12 @@ namespace MAIN_SETTINGS
         }
         public static float m_currentLevelSpeed { get; set; }
 
-        public static void LoadLevel( LEVEL_NUM num )
+        public static void LoadIntoLevel( LEVEL_NUM num )
         {
             m_levelNo = num;
+            Level l = BinaryLoader.LoadLevel(num);
+            m_levelData = l;
+            m_currentLevelSpeed = m_levelData.speed;
 
         }
     }

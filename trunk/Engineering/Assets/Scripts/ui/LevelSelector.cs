@@ -28,6 +28,7 @@ public class LevelSelector : MonoBehaviour {
                     SoundManager.PlaySafe(ref m_click);
                     uint levelNo = (uint)System.Convert.ToInt16(hit.collider.name);
                     LEVEL_NUM level = (LEVEL_NUM)levelNo;
+                    Settings.LoadIntoLevel(level);
                     Application.LoadLevel(2);
                     Debug.Log(level);
                     SoundManager.PlaySafe(ref m_levelEnter);
@@ -50,6 +51,7 @@ public class LevelSelector : MonoBehaviour {
                     SoundManager.PlaySafe(ref m_click);
                     uint levelNo = (uint)System.Convert.ToInt16(hit.collider.name);
                     LEVEL_NUM level = (LEVEL_NUM)levelNo;
+                    Settings.LoadIntoLevel(level);
                     Application.LoadLevel(2);
                     Debug.Log(level);
                     SoundManager.PlaySafe(ref m_levelEnter); 

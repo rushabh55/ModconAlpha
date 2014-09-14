@@ -29,7 +29,6 @@ public class AdjustPositions : MonoBehaviour
 	
     public void Reposition()
     {
-        Debug.Log("Repositioning");
         _start.transform.position = pole1.transform.position;
         var pos = _start.transform.position;
         pos.y = (float)((int)pole1.renderer.bounds.size.y >> 1) + ((int)((BoxCollider)_psuedoWorker.collider).size.y << 3);
@@ -41,9 +40,12 @@ public class AdjustPositions : MonoBehaviour
         pos.y = (float)((int)pole2.renderer.bounds.size.y >> 1) + ((int)((BoxCollider)_psuedoWorker.collider).size.y << 3);
         pos.z = pole2.transform.position.z;
         _target.transform.position = pos;
-        _player.transform.position
-             = _start.transform.position;
-
+        try
+        {
+            _player.transform.position
+                = _start.transform.position;
+        }
+        catch (System.Exception e) { }
         if (_player2.renderer.isVisible)
         {
             _start2.transform.position = pole12.transform.position;
