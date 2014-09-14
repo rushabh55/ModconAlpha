@@ -121,7 +121,7 @@ public class TapMouseRayCast : MonoBehaviour
                     {
 						SoundManager.PlaySafe ( ref _clickSound );
 						hit.collider.renderer.material.color = Color.green;
-                        Application.LoadLevelAdditiveAsync(1);
+                        Application.LoadLevelAsync(1);
                     }
                     catch (System.Exception e)
                     {

@@ -408,7 +408,8 @@ Prefab:
       propertyPath: m_HDR
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 11400002, guid: 6f9d554be1f8f9443b352a6a4f25078e, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 6f9d554be1f8f9443b352a6a4f25078e, type: 2}
   m_RootGameObject: {fileID: 421557561}
   m_IsPrefabParent: 0
@@ -427,7 +428,6 @@ GameObject:
   - 81: {fileID: 421557562}
   - 114: {fileID: 421557567}
   - 131: {fileID: 421557569}
-  - 114: {fileID: 421557568}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -528,19 +528,6 @@ MonoBehaviour:
   m_currAnimState: 0
   m_currentState: 1
   _mouseTexture: {fileID: 2800000, guid: dcebecf55f3923740b48cdbe56e04ab7, type: 3}
---- !u!114 &421557568
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11400002, guid: 6f9d554be1f8f9443b352a6a4f25078e,
-    type: 2}
-  m_PrefabInternal: {fileID: 333178583}
-  m_GameObject: {fileID: 421557561}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bf5a9a2eb4febcf41b6e54febed676db, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_camera: {fileID: 0}
 --- !u!131 &421557569
 GUITexture:
   m_ObjectHideFlags: 0

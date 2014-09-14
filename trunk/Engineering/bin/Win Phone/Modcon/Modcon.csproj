@@ -173,8 +173,20 @@
     <Reference Include="Boo.Lang">
       <HintPath>Boo.Lang.dll</HintPath>
     </Reference>
+    <Reference Include="IFacebook">
+      <HintPath>IFacebook.dll</HintPath>
+    </Reference>
+    <Reference Include="PlayMaker">
+      <HintPath>PlayMaker.dll</HintPath>
+    </Reference>
+    <Reference Include="TouchScript">
+      <HintPath>TouchScript.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEngine">
       <HintPath>UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="WinRTLegacy">
       <HintPath>WinRTLegacy.dll</HintPath>
