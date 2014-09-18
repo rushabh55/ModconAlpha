@@ -18,6 +18,9 @@ public class SimplePlayerTranslate : MonoBehaviour , ILevelObject
     public Camera camera;
     public ParticleSystem _explosionParticleSystem;
     public AdjustPositions m_sAdjustPositions;
+
+    public GameObject __bgObj;
+
     public enum InputType
     {
         Mouse,
@@ -47,8 +50,8 @@ public class SimplePlayerTranslate : MonoBehaviour , ILevelObject
 	// Update is called once per frame
 	void Update () 
     {
-        _player.transform.position = Vector3.MoveTowards(_player.transform.position, end.transform.position, Time.deltaTime * Settings.m_currentLevelSpeed);        
-        if ( AdjustPositions.isDoubleEnabled )
+        _player.transform.position = Vector3.MoveTowards(_player.transform.position, end.transform.position, Time.deltaTime * Settings.m_currentLevelSpeed);
+        if (AdjustPositions.isDoubleEnabled)
         {
             if (_player2 != null)
             {
@@ -76,6 +79,12 @@ public class SimplePlayerTranslate : MonoBehaviour , ILevelObject
 
         CheckForCollision();
         CheckForVectorCollision();
+        CheckForAccInput();
+    }
+
+    private void CheckForAccInput()
+    {
+        __bgObj.transform.Translate(new Vector3(Input.acceleration.x, 0, -Input.acceleration.z));
     }
 
     private void CheckForVectorCollision()

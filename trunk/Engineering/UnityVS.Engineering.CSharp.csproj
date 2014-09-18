@@ -92,7 +92,6 @@
     <Compile Include="Assets\Scripts\EndLevel.cs" />
     <Compile Include="Assets\Scripts\Jukebox.cs" />
     <Compile Include="Assets\Scripts\LevelData\BinaryLoader.cs" />
-    <Compile Include="Assets\Scripts\LevelData\LevelLoad.cs" />
     <Compile Include="Assets\Scripts\Main\AdjustPositions.cs" />
     <Compile Include="Assets\Scripts\Main\CharacterMover.cs" />
     <Compile Include="Assets\Scripts\Main\CompoundTranslater.cs" />

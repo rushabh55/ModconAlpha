@@ -18,8 +18,10 @@ public class FirstStart : MonoBehaviour {
             {
                 WriteToFile(); 
                 DebugPanel.AddText(path + "\n" + File.Exists(Settings.dataFileName).ToString(), true);
-
+                return;
             }
+            WriteToFile();
+            Debug.Log(Settings.dataFileName);
         }
         catch (Exception e)
         {
@@ -55,7 +57,7 @@ public class FirstStart : MonoBehaviour {
             }
 
             l.speed = speed;
-            speed += (i + 1) * 2.5f;
+            speed += (i * 0.0099f + 0.00001f) * 1.000001f;
 
             l.weapon = Weapon.None;
 

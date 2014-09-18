@@ -737,6 +737,7 @@ MonoBehaviour:
   camera: {fileID: 972611070}
   _explosionParticleSystem: {fileID: 1040486635}
   m_sAdjustPositions: {fileID: 295695072}
+  __bgObj: {fileID: 0}
   _inputType: 0
   crossHair: {fileID: 295695074}
 --- !u!131 &295695074
@@ -780,6 +781,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9ad1fba638081c44b318b485c592116, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  __bgObj: {fileID: 0}
   m_chars:
   - m_character: {fileID: 787471772}
     m_start: {fileID: 347557439}
@@ -870,8 +872,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_boxPosition:
     serializedVersion: 2
-    x: 500
-    y: 250
+    x: 0
+    y: 0
     width: 500
     height: 250
   m_content:
@@ -5837,6 +5839,7 @@ Transform:
   - {fileID: 82084165}
   - {fileID: 748411765}
   - {fileID: 245486068}
+  - {fileID: 1987463619}
   m_Father: {fileID: 0}
   m_RootOrder: 1
 --- !u!1 &1517158357
@@ -6213,6 +6216,53 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1939321957}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1987463618
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1987463619}
+  - 131: {fileID: 1987463620}
+  m_Layer: 0
+  m_Name: CrossHair
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1987463619
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1987463618}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1513376808}
+  m_RootOrder: 4
+--- !u!131 &1987463620
+GUITexture:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1987463618}
+  m_Enabled: 1
+  m_Texture: {fileID: 2800000, guid: b480f93f566b74c4980af024b5e040f1, type: 3}
+  m_Color: {r: .5, g: .5, b: .5, a: .5}
+  m_PixelInset:
+    serializedVersion: 2
+    x: 500
+    y: 20
+    width: .000150000007
+    height: .000150000007
+  m_LeftBorder: 0
+  m_RightBorder: 0
+  m_TopBorder: 0
+  m_BottomBorder: 0
 --- !u!1 &2006769304
 GameObject:
   m_ObjectHideFlags: 0

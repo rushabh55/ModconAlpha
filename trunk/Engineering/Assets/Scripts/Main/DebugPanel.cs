@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿
+using UnityEngine;
 using System.Collections;
 using System.Text;
 using System.Collections.Generic;
@@ -26,6 +27,8 @@ public class DebugPanel : MonoBehaviour {
 
     void OnGUI()
     {
+#if DEBUG
+
         GUI.Box(__BoxPosition, "");
         GUI.skin.textArea.fontSize = 30;
         GUI.TextArea(__BoxPosition, _objCollection.ToString());
@@ -34,6 +37,7 @@ public class DebugPanel : MonoBehaviour {
         if ( _player != null)
         GUI.Label(new Rect(__BoxPosition.x, __BoxPosition.y + __BoxPosition.height, 250, 75), "playerPos : " + _player.transform.position);
 
+#endif
     }
 
 }

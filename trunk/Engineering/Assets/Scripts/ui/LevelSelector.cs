@@ -29,9 +29,11 @@ public class LevelSelector : MonoBehaviour {
                     uint levelNo = (uint)System.Convert.ToInt16(hit.collider.name);
                     LEVEL_NUM level = (LEVEL_NUM)levelNo;
                     Settings.LoadIntoLevel(level);
-                    Application.LoadLevel(2);
                     Debug.Log(level);
                     SoundManager.PlaySafe(ref m_levelEnter);
+                    EndLevel.isOver = false;
+                    Time.timeScale = 1f; 
+                    Application.LoadLevel(2);
                 }
             }
         }
@@ -52,9 +54,10 @@ public class LevelSelector : MonoBehaviour {
                     uint levelNo = (uint)System.Convert.ToInt16(hit.collider.name);
                     LEVEL_NUM level = (LEVEL_NUM)levelNo;
                     Settings.LoadIntoLevel(level);
+                    SoundManager.PlaySafe(ref m_levelEnter);
+                    EndLevel.isOver = false;
+                    Time.timeScale = 1f;
                     Application.LoadLevel(2);
-                    Debug.Log(level);
-                    SoundManager.PlaySafe(ref m_levelEnter); 
                 }
             }
         }

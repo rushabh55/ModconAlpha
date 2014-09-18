@@ -31,6 +31,7 @@ public class characterMeta
     }
 }
 public class CharacterMover : MonoBehaviour {
+    public GUITexture __bgObj;
     public characterMeta[] m_chars = new characterMeta[3];
 	// Use this for initialization
 	void Start () 
@@ -64,6 +65,17 @@ public class CharacterMover : MonoBehaviour {
         InvokeEventsIfNeeded();
 	}
 
+    void FixedUpdate()
+    {
+        CheckAccInput();
+
+    }
+
+    private void CheckAccInput()
+    {
+        var rect = __bgObj.pixelInset;
+        
+    }
     private void InvokeEventsIfNeeded()
     {
         foreach( var t in m_chars )

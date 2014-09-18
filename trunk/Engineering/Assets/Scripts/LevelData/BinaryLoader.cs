@@ -21,7 +21,7 @@ public class BinaryLoader : MonoBehaviour {
             DebugPanel.AddText("Loaded" + fs.Name, true);
             fs.Close();
             fs.Dispose();
-            return lvlData[(int)levelNo];
+            return lvlData[(int)levelNo - 1];
         }
         else
         {
