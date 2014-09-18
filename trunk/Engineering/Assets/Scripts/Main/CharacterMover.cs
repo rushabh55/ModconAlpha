@@ -73,8 +73,7 @@ public class CharacterMover : MonoBehaviour {
 
     private void CheckAccInput()
     {
-        var rect = __bgObj.pixelInset;
-        
+        var delta2 = new Vector2(Input.acceleration.x * 2.45f, Input.acceleration.y * 2.45f);
     }
     private void InvokeEventsIfNeeded()
     {
